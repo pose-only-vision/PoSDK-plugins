@@ -1,0 +1,41 @@
+{
+  "author": "",
+  "base_class": "MethodPresetProfiler",
+  "config_files": [
+    "configs/methods/method_rotation_averaging.ini"
+  ],
+  "description": "Rotation averaging method plugin.",
+  "display_name": "Rotation Averaging",
+  "format_version": 1,
+  "group": "SfM/Optimization",
+  "homepage": "",
+  "input_types": [
+    "data_relative_poses"
+  ],
+  "license": "LicenseRef-PoSDK-Proprietary",
+  "min_posdk_version": "1.0.0",
+  "name": "method_rotation_averaging",
+  "output_types": [
+    "data_global_poses"
+  ],
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ],
+  "plugin_files": [
+    "plugins/methods/posdk_plugin_method_rotation_averaging.dylib",
+    "plugins/methods/posdk_plugin_method_rotation_averaging.posdk.json"
+  ],
+  "plugin_type": "method",
+  "runtime_dependencies": [
+    {
+      "section": "method_rotation_averaging",
+      "config_key": "chatterjee_method",
+      "kind": "method"
+    }
+  ],
+  "tags": [],
+  "version": "0.1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "plugin_key": "method_rotation_averaging",
+  "name": "Rotation Averaging",
+  "plugin_type": "method",
+  "version": "0.1.0",
+  "group": "SfM/Optimization",
+  "summary": "Rotation averaging with built-in Chatterjee and installer-managed GraphOptim backends.",
+  "install_script": "install.sh",
+  "publisher_key": "publisher-key.pem",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ],
+  "distribution_model": "closed_plugin_open_dependencies"
+}
