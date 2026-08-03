@@ -20,4 +20,3 @@ The installer reports `bin` through the signed `graphoptim_bin` configuration
 binding. PoSDK validates `rotation_estimator` and writes the resulting absolute
 directory into `method_rotation_averaging.graphoptim_bin_folder`; users do not
 need to locate or enter the path manually.
-
