@@ -1,0 +1,50 @@
+{
+  "author": "Qi Cai",
+  "base_class": "MethodPresetProfiler",
+  "capabilities": {
+    "two_view_estimator": {
+      "contract_version": 1,
+      "input_contract": "id_matches_features_cameras",
+      "output_contract": "relative_pose",
+      "pose_convention": "opengv",
+      "inlier_contract": "matches_in_place",
+      "refinement_contract": "unsupported"
+    }
+  },
+  "config_files": [
+    "configs/methods/degensac_two_view_estimator.ini"
+  ],
+  "description": "DEGENSAC two-view estimator method plugin.",
+  "display_name": "DegensacTwoViewEstimator",
+  "format_version": 1,
+  "group": "SfM/Two View Estimators",
+  "homepage": "",
+  "input_types": [
+    "data_sample",
+    "data_features",
+    "data_camera_models"
+  ],
+  "license": "MPL-2.0 AND MIT AND LGPL-2.1-only",
+  "min_posdk_version": "1.0.0",
+  "name": "degensac_two_view_estimator",
+  "output_types": [
+    "data_relative_pose"
+  ],
+  "plugin_files": [
+    "plugins/methods/posdk_plugin_degensac_two_view_estimator.dylib",
+    "plugins/methods/posdk_plugin_degensac_two_view_estimator.posdk.json"
+  ],
+  "plugin_type": "method",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ],
+  "tags": [
+    "DEGENSAC",
+    "two-view geometry",
+    "robust estimation"
+  ],
+  "version": "1.1.1"
+}

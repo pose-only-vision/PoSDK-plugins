@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "plugin": {
+    "id": "degensac_two_view_estimator",
+    "kind": "method"
+  },
+  "resources": [],
+  "profiles": {
+    "quick": [
+      "runtime_contract"
+    ],
+    "standard": [
+      "runtime_contract"
+    ]
+  },
+  "cases": [
+    {
+      "id": "runtime_contract",
+      "title": "Runtime compatibility gate | 运行兼容性门禁",
+      "description": "Pins the exact DEGENSAC plugin generation and validates identity, Method kind, PoSDK ABI, macOS arm64 architecture, dependency closure, manifests, and safe loading. Algorithm correctness and deterministic seeded execution are covered by the PoSDK.TwoViewEstimatorDegensacBackendContract integration test before release. | 固定DEGENSAC插件的精确generation，并验证身份、Method类型、PoSDK ABI、macOS arm64架构、依赖闭包、manifest与安全加载。算法正确性与确定性seed执行在发布前由PoSDK.TwoViewEstimatorDegensacBackendContract集成测试覆盖。",
+      "driver": "snapshot",
+      "timeout_seconds": 30,
+      "repeat": 1,
+      "seed": 42
+    }
+  ]
+}

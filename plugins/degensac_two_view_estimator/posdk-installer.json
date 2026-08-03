@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "privilege": "user",
+  "network": false,
+  "timeout_seconds": 1800,
+  "resources": [],
+  "configuration_bindings": []
+}

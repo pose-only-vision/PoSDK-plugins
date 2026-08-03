@@ -1,0 +1,7 @@
+.DS_Store
+.posdk-build/
+build/
+dist/
+*.pospkg
+*.pospkg.sha256
+

@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "plugin_key": "degensac_two_view_estimator",
+  "name": "DegensacTwoViewEstimator",
+  "plugin_type": "method",
+  "version": "1.1.1",
+  "group": "SfM/Two View Estimators",
+  "summary": "DEGENSAC two-view estimator method plugin.",
+  "install_script": "install.sh",
+  "publisher_key": "publisher-key.pem",
+  "distribution_model": "open_plugin_open_dependencies",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ]
+}
