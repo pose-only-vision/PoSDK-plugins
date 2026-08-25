@@ -35,7 +35,8 @@ traditional matcher.
 |---|---:|---:|---|
 | **Balanced (default)** | 1024 | 1280 | Accuracy-oriented general use |
 | **Fast** | 896 | 512 | Lower latency and memory; sparser reconstruction |
-| High resolution (manual) | 1600 | 4096 | Diagnostic accuracy mode; two-image smoke peaked near 5.4 GB RSS |
+| Dense (manual, experimental) | 1600 | 4096 | More sparse-map points; HJ8 smoke peaked near 5.4 GB RSS |
+| Extreme (manual, diagnostic only) | 1600 | 8192 | Very high CPU/RSS cost; not recommended for normal use |
 
 The remaining certified comparison settings are exhaustive pairing,
 `detection_threshold=0.01`, `filter_threshold=0.10`,
@@ -59,42 +60,56 @@ with the pinned runtime in current smoke tests.
 The `image_folder` field is only a Developer fallback. Publishable workflows
 should connect `data_images` explicitly.
 
-## Strecha evidence
+## Corrected exploratory evidence
 
-The comparison used the existing PoSDK Strecha pipeline with the frontend as
-the only changed component. The baseline was `PoSDKPreprocessor` configured as
-SIFT + `CASCADE_HASHING_L2`; calibration, two-view estimation, rotation
-averaging, track building, global reconstruction, evaluation, and export were
-held fixed. Tests ran on an Apple M4 Max using the certified CPU path.
+> **Protocol correction (2026-08-26):** an earlier version of this README
+> reported results from PoSDK's `opencv-poengine-strecha` workflow as if they
+> were LiRP-paper workflow evidence. Those claims are withdrawn. The corrected
+> tests below use the current builtin
+> `paper-gnc-ransac-gate-poengine-strecha` backend. They are frontend
+> ablations, not reproductions of the paper's original tables.
 
-For Herz-Jesus-P8, Balanced was measured after one warm-up over five alternating
-A/B and B/A repetitions. Values are medians; lower error and time are better.
+The corrected comparison keeps the dataset loader, GNC-RANSAC LiRP estimator,
+graph gate, rotation averaging, track builder, PoRobust reconstruction,
+evaluation, and export fixed. Candidate runs replace only the frontend
+provider at the same node and ports. Tests used the certified CPU path on an
+Apple M4 Max. Each entry below is a single measured smoke run without warm-up,
+so timing is descriptive only.
 
-| Metric | PoSDKPreprocessor | ALIKED + LightGlue | Candidate ratio |
-|---|---:|---:|---:|
-| Frontend time | 11.752 s | 11.292 s | 0.961× |
-| End-to-end wall time | 13.692 s | 12.605 s | 0.921× |
-| Relative rotation error | 0.07892° | 0.05837° | 0.740× |
-| Relative translation error | 0.07980° | 0.07504° | 0.940× |
-| Global rotation error | 0.13166° | 0.04093° | 0.311× |
-| Global translation error | 0.01778 | 0.00577 | 0.325× |
-| Relative-pair coverage | 96.4% | 100% | — |
-| Reconstructed points | 8610 | 979 | — |
+Values are `PoSDKPreprocessor → ALIKED + LightGlue Balanced`; lower error is
+better.
 
-The final Pillow runtime was also checked once on all six scenes with the Fast
-preset. All 12 runs passed snapshot/runtime attestation. Frontend time improved
-in 6 of 6 scenes; the per-scene candidate/baseline ratios were 0.552, 0.824,
-0.538, 0.842, 0.561, and 0.878 (median 0.692). Eighteen of 24 pose-error cells
-improved and all cameras registered. Entry-P10, fountain-P11, and
-Herz-Jesus-P25 still contained pose-error regressions; castle-P19,
-Herz-Jesus-P25, and castle-P30 had lower pair coverage. Every candidate point
-cloud was much sparser than its SIFT baseline.
+| Scene | Frontend | Relative-pair coverage | Relative R / t median | Global R / t median | PLY points |
+|---|---:|---:|---:|---:|---:|
+| Herz-Jesus-P8 | 11.718 → 12.892 s | 75.0% → 100% | 0.03169° / 0.06255° → 0.04942° / 0.06040° | 0.02427° / 0.004034 → 0.05094° / 0.004681 | 21,467 → 1,606 |
+| entry-P10 | 11.494 → 16.961 s | 82.2% → 100% | 0.02924° / 0.04960° → 0.09730° / 0.13648° | 0.01695° / 0.004632 → 0.09260° / 0.013239 | 18,766 → 2,188 |
+| fountain-P11 | 18.238 → 18.124 s | 76.4% → 94.5% | 0.04251° / 0.04816° → 0.06692° / 0.08677° | 0.03401° / 0.002506 → 0.08678° / 0.004119 | 40,980 → 2,434 |
 
-These results support two bounded claims: Balanced exceeded the baseline on
-HJ8 under the repeated protocol, while Fast is a promising speed-oriented
-preset across the six single-run checks. They do **not** establish uniform
-accuracy superiority or dense-map equivalence. Full multi-scene repeated runs
-and broader hardware coverage are required before a Stable designation.
+Balanced increased relative-pair coverage in all three scenes, but it achieved
+a lower error in only one of the twelve scene/pose-metric cells. It therefore
+does not establish an accuracy or runtime advantage over the default SIFT
+frontend.
+
+On HJ8, increasing the candidate budget raised PLY points from 1,606 at 1,280
+keypoints/image to 5,284 at 4,096 and 9,678 at 8,192. The corresponding
+frontend times were 12.9 s, 56.6 s, and 223.4 s, with candidate peak RSS of
+approximately 2.9 GB, 5.4 GB, and 9.0 GB. The 8,192 setting still produced
+only 45.1% of the default SIFT point count. Lowering LightGlue's filter
+threshold from 0.10 to 0.05 at 4,096 keypoints added only 23 PLY points and
+worsened all four median pose errors.
+
+Raw-image ETH3D frontend checks are currently negative compatibility evidence,
+not a release claim. The paper's ETH3D protocol consumes pre-existing
+correspondences and evaluates N-point solvers; replacing that input with
+exhaustive raw-image matches is a different experiment. In current `pipes` and
+`meadow` checks, at least one arm failed complete-camera publishability or had
+substantial accuracy regressions.
+
+The plugin remains **Experimental**. It is useful as an optional learned
+frontend with stable multiview IDs and often broader pair coverage, but current
+evidence does not show cross-scene or cross-dataset superiority. Sparse-map
+density also remains substantially below the default SIFT frontend unless very
+high keypoint budgets are used.
 
 ## Reproducibility and runtime identity
 
