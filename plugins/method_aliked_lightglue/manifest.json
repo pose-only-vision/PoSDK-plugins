@@ -1,0 +1,42 @@
+{
+  "author": "PoSDK",
+  "base_class": "MethodPresetProfiler",
+  "config_files": [
+    "configs/methods/method_aliked_lightglue.ini"
+  ],
+  "description": "Dataset-level ALIKED feature extraction and LightGlue matching with stable multiview feature IDs.",
+  "display_name": "ALIKED + LightGlue",
+  "format_version": 1,
+  "group": "SfM/Feature Extraction and Matching",
+  "homepage": "https://posdk.net",
+  "input_types": [
+    "data_images"
+  ],
+  "license": "MPL-2.0 AND Apache-2.0 AND BSD-3-Clause AND MIT-CMU",
+  "min_posdk_version": "2.0.0",
+  "name": "method_aliked_lightglue",
+  "output_types": [
+    "data_features",
+    "data_matches"
+  ],
+  "plugin_files": [
+    "plugins/methods/posdk_plugin_method_aliked_lightglue.dylib",
+    "plugins/methods/posdk_plugin_method_aliked_lightglue.posdk.json"
+  ],
+  "plugin_type": "method",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ],
+  "tags": [
+    "experimental",
+    "feature-extraction",
+    "feature-matching",
+    "aliked",
+    "lightglue",
+    "sfm"
+  ],
+  "version": "0.1.0"
+}

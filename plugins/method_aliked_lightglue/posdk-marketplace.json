@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "plugin_key": "method_aliked_lightglue",
+  "name": "ALIKED + LightGlue",
+  "plugin_type": "method",
+  "version": "0.1.0",
+  "group": "SfM/Feature Extraction and Matching",
+  "summary": "Experimental dataset-level ALIKED extraction and LightGlue matching with reproducible private dependencies.",
+  "install_script": "install.sh",
+  "publisher_key": "publisher-key.pem",
+  "distribution_model": "closed_plugin_open_dependencies",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ]
+}
+
