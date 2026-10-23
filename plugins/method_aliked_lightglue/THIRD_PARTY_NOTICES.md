@@ -1,11 +1,15 @@
+PoMVG integration layer only. ALIKED, LightGlue, their implementations and model weights retain the upstream authors, copyright holders and licenses listed below.
+
 # Third-party notices
 
-`method_aliked_lightglue` is distributed as a closed PoSDK plugin with open
+`method_aliked_lightglue` is distributed as a closed PoMVG plugin with open
 dependencies. The signed `.pospkg` contains the installer recipes and license
 notices; the isolated runtime dependencies are downloaded from their public
 upstreams during installation.
 
 ## ALIKED
+
+- Original authors: Xiaoming Zhao, Xingming Wu, Weihai Chen, Peter C. Y. Chen, Qingsong Xu, and Zhengguo Li
 
 - Project: <https://github.com/Shiaoming/ALIKED>
 - Pinned commit: `683d7c65197395c0b3f01ebe76e1084a27e73a65`
@@ -19,6 +23,9 @@ upstreams during installation.
 - Redistributed full text: `licenses/ALIKED-BSD-3-Clause.txt`
 
 ## LightGlue
+
+- Original team: Computer Vision and Geometry Group (CVG), ETH Zurich
+- Original authors: Philipp Lindenberger, Paul-Edouard Sarlin, and Marc Pollefeys
 
 - Project: <https://github.com/cvg/LightGlue>
 - Pinned commit: `eb42fee2d71449efb0aa5c10549752b5d75384d8`

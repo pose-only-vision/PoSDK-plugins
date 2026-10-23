@@ -40,7 +40,7 @@ traditional matcher.
 
 The remaining certified comparison settings are exhaustive pairing,
 `detection_threshold=0.01`, `filter_threshold=0.10`,
-`depth_confidence=0.95`, `width_confidence=0.99`, four CPU threads, and seed
+`depth_confidence=0.95`, `width_confidence=0.99`, six CPU threads, and seed
 31. Exhaustive matching scales quadratically with image count; use
 `pair_mode=contiguous` for long sequences.
 

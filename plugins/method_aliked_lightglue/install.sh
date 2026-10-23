@@ -8,7 +8,7 @@ umask 077
 [ "${POSDK_INSTALL_PROTOCOL:-}" = "posdk.package-install.v1" ] || { echo "unsupported installer protocol" >&2; exit 64; }
 : "${POSDK_PACKAGE_ROOT:?}" "${POSDK_INSTALL_STATE_ROOT:?}" "${POSDK_PLUGIN_ID:?}" "${POSDK_PLUGIN_TYPE:?}" "${POSDK_PLUGIN_VERSION:?}" "${POSDK_TARGET_SYSTEM:?}" "${POSDK_TARGET_ARCH:?}"
 [ "$POSDK_PLUGIN_ID" = "method_aliked_lightglue" ] && [ "$POSDK_PLUGIN_TYPE" = "method" ] || { echo "plugin identity mismatch" >&2; exit 65; }
-[ "$POSDK_PLUGIN_VERSION" = "0.1.0" ] || { echo "plugin version mismatch" >&2; exit 65; }
+[ "$POSDK_PLUGIN_VERSION" = "0.1.1" ] || { echo "plugin version mismatch" >&2; exit 65; }
 [ "${POSDK_INSTALL_NETWORK:-0}" = "1" ] || { echo "network permission is required" >&2; exit 69; }
 [ "$POSDK_TARGET_SYSTEM" = "macos" ] && [ "$POSDK_TARGET_ARCH" = "arm64" ] || { echo "unsupported target" >&2; exit 65; }
 
