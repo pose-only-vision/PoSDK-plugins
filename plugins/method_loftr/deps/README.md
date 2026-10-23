@@ -7,6 +7,13 @@ PyTorch 2.2.2, Kornia 0.7.4, NumPy 1.26.4 and OpenCV headless 4.10.0.84.
 `install.sh` is the executable creation recipe and `install-smoke.py` loads
 the real outdoor LoFTR model on CPU and checks finite correspondences.
 
+The inference implementation is [Kornia 0.7.4 source](https://github.com/kornia/kornia/tree/v0.7.4)
+(Apache-2.0), using the original [LoFTR project](https://github.com/zju3dv/LoFTR)
+(Apache-2.0) and its dual-softmax checkpoints. The optional SuperGlue
+optimal-transport implementation is not included. Upstream attribution and
+license notices are retained in `THIRD_PARTY_NOTICES.md` and the installed
+distributions.
+
 Kornia's pinned model URLs use HTTPS at `cmp.felk.cvut.cz/~mishkdmy/models/`:
 
 - `loftr_outdoor.ckpt`: `21f5bec5968178e8bc8b7633441836fe5de4f47d861dd2cd7dc38e271b0479ec`
