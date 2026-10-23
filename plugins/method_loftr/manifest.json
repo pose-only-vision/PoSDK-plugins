@@ -1,0 +1,39 @@
+{
+  "author": "",
+  "base_class": "MethodPresetProfiler",
+  "config_files": [
+    "configs/methods/method_loftr.ini"
+  ],
+  "description": "LoFTR matching with configurable SSH offloading and local inference.",
+  "display_name": "LoFTR",
+  "format_version": 1,
+  "group": "SfM/Feature Extraction and Matching",
+  "homepage": "",
+  "input_types": [
+    "data_images"
+  ],
+  "license": "MPL-2.0",
+  "min_posdk_version": "2.0.0",
+  "name": "method_loftr",
+  "output_types": [
+    "data_features",
+    "data_matches"
+  ],
+  "plugin_files": [
+    "plugins/methods/posdk_plugin_method_loftr.dylib",
+    "plugins/methods/posdk_plugin_method_loftr.posdk.json"
+  ],
+  "plugin_type": "method",
+  "tags": [
+    "experimental",
+    "loftr",
+    "feature-matching"
+  ],
+  "version": "0.3.0",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ]
+}

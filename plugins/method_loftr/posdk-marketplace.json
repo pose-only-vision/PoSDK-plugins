@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "plugin_key": "method_loftr",
+  "name": "LoFTR",
+  "plugin_type": "method",
+  "version": "0.3.0",
+  "group": "SfM/Feature Extraction and Matching",
+  "summary": "LoFTR feature matching with SSH server execution, transfer progress, verified results and optional local inference.",
+  "install_script": "install.sh",
+  "publisher_key": "publisher-key.pem",
+  "distribution_model": "closed_plugin_open_dependencies",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ]
+}
