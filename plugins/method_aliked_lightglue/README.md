@@ -1,6 +1,10 @@
-# ALIKED + LightGlue for PoSDK
+# ALIKED + LightGlue for PoMVG
 
-Experimental PoSDK Marketplace frontend for dataset-level
+**Plugin integration author / 插件集成作者:** qi Cai
+
+**Contact / 联系邮箱:** <qicaiCN@gmail.com>
+
+Experimental PoMVG frontend for dataset-level
 [ALIKED](https://github.com/Shiaoming/ALIKED) feature extraction and
 [LightGlue](https://github.com/cvg/LightGlue) matching. It accepts
 `data_images` and returns `data_features` plus `data_matches` with one stable
@@ -14,9 +18,9 @@ tracks.
 
 ## Platform and installation
 
-- PoSDK 2.0 or newer
+- PoMVG with the PoSDK 2.0 or newer plugin API
 - macOS on Apple silicon (`arm64`)
-- Marketplace `.pospkg` installation only; it is not bundled into the PoSDK
+- Marketplace `.pospkg` installation only; it is not bundled into the PoMVG
   App
 - First install requires network access and about **0.8–0.9 GiB** for the
   isolated Python/model runtime; the installer allows up to 60 minutes for
@@ -49,9 +53,9 @@ explicit `device=mps` mode is experimental: ALIKED remains on CPU while
 LightGlue uses Metal. It is not selected automatically because it was slower
 with the pinned runtime in current smoke tests.
 
-## GUI use
+## Use in PoMVG
 
-1. Install **ALIKED + LightGlue** from PoSDK Marketplace.
+1. Install **ALIKED + LightGlue** from the PoMVG plugin marketplace.
 2. Add the method under **SfM / Feature Extraction and Matching**.
 3. Connect a `data_images` output to its input.
 4. Connect `data_features` and `data_matches` to the same calibrated two-view,
@@ -142,5 +146,27 @@ distinguishable.
 - The plugin fails closed when its private runtime or identity is invalid; it
   has no algorithm fallback.
 
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for dependency and license
-information.
+## Third-party dependencies / 第三方依赖
+
+qi Cai authors and maintains the PoMVG integration. ALIKED, LightGlue, their
+model weights, and the Python libraries retain their upstream authors and
+licenses.
+
+| Component | Pinned version or revision | Role | Upstream license / notice |
+|---|---|---|---|
+| [ALIKED](https://github.com/Shiaoming/ALIKED/tree/683d7c65197395c0b3f01ebe76e1084a27e73a65) | `683d7c65197395c0b3f01ebe76e1084a27e73a65`; ALIKED-n16 | Feature extraction and checkpoint | BSD-3-Clause; Xiaoming Zhao et al. |
+| [LightGlue](https://github.com/cvg/LightGlue/tree/eb42fee2d71449efb0aa5c10549752b5d75384d8) | `eb42fee2d71449efb0aa5c10549752b5d75384d8`; `v0.1_arxiv` checkpoint | Learned feature matching and ALIKED implementation | Apache-2.0; Philipp Lindenberger, Paul-Edouard Sarlin, Marc Pollefeys / ETH Zurich |
+| [CPython](https://github.com/python/cpython/tree/v3.11.11) | 3.11.11 | Isolated interpreter | Python license and bundled notices |
+| [PyTorch](https://github.com/pytorch/pytorch/tree/v2.2.2) / [torchvision](https://github.com/pytorch/vision/tree/v0.17.2) | 2.2.2 / 0.17.2 | Tensor and model runtime | Aggregate licenses and notices in the exact distributions |
+| [NumPy](https://github.com/numpy/numpy/tree/v1.26.4) | 1.26.4 | Array operations | Aggregate distribution and component license texts |
+| [Pillow](https://github.com/python-pillow/Pillow) | 12.3.0 | RGB image decoding | MIT-CMU and bundled-library notices |
+| [Kornia](https://github.com/kornia/kornia/tree/v0.6.12) | 0.6.12 | Geometry utilities used by the pinned frontend | Apache-2.0 |
+| [micromamba](https://github.com/mamba-org/mamba) | 2.3.2, when a local environment creator is unavailable | Installation bootstrap | BSD-3-Clause |
+
+安装时创建插件独立环境并校验源码、模型和软件包的 SHA-256；不修改用户的
+Python/Conda 环境。该插件使用 Pillow 解码图像，运行环境不安装 OpenCV。
+ALIKED 和 LightGlue 的原始作者署名与许可证不因 PoMVG 集成而改变。
+
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for upstream authors,
+checkpoint URLs and license locations, and [deps/README.md](deps/README.md)
+for the complete version/hash inventory and installation recipe.

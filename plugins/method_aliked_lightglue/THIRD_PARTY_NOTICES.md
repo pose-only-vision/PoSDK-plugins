@@ -1,5 +1,9 @@
 PoMVG integration layer only. ALIKED, LightGlue, their implementations and model weights retain the upstream authors, copyright holders and licenses listed below.
 
+**Plugin integration author:** qi Cai
+
+**Contact:** <qicaiCN@gmail.com>
+
 # Third-party notices
 
 `method_aliked_lightglue` is distributed as a closed PoMVG plugin with open
@@ -13,6 +17,8 @@ upstreams during installation.
 
 - Project: <https://github.com/Shiaoming/ALIKED>
 - Pinned commit: `683d7c65197395c0b3f01ebe76e1084a27e73a65`
+- Checkpoint URL: <https://raw.githubusercontent.com/Shiaoming/ALIKED/683d7c65197395c0b3f01ebe76e1084a27e73a65/models/aliked-n16.pth>
+- Checkpoint SHA-256: `5be8704840ed662d9d8c561bf7279c222092674e7eb05fd0feab94899e9d82f2`
 - Component: `aliked-n16.pth` checkpoint from the pinned ALIKED repository; the
   ALIKED-derived implementation in LightGlue is separately fixed by the
   LightGlue source-tree hash
@@ -29,6 +35,8 @@ upstreams during installation.
 
 - Project: <https://github.com/cvg/LightGlue>
 - Pinned commit: `eb42fee2d71449efb0aa5c10549752b5d75384d8`
+- Source archive SHA-256: `e5c696a4c69be4e335b090ce3f70da1060f8aa52e61d463e96a930ebefd57a19`
+- Canonical extracted-tree SHA-256: `78cc712925a8de33ef9be7e807d0395f916dbd4eeb28f3644243ae2a00297d33`
 - Component: LightGlue source and the ALIKED-compatible `v0.1_arxiv` checkpoint
 - Checkpoint release tag commit:
   `c91eb892b799fa607523879d18f9ec4fe76194a5`
@@ -52,6 +60,13 @@ components include:
 - NumPy 1.26.4
 - Pillow 12.3.0
 - Kornia 0.6.12
+
+Source references: [CPython](https://github.com/python/cpython/tree/v3.11.11),
+[PyTorch](https://github.com/pytorch/pytorch/tree/v2.2.2),
+[torchvision](https://github.com/pytorch/vision/tree/v0.17.2),
+[NumPy](https://github.com/numpy/numpy/tree/v1.26.4),
+[Pillow](https://github.com/python-pillow/Pillow), and
+[Kornia](https://github.com/kornia/kornia/tree/v0.6.12).
 
 The exact open distributions retain their complete license files, notices,
 third-party attributions, and any supplied SBOMs inside the installed private

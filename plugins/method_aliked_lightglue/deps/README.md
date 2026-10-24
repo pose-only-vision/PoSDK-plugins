@@ -40,3 +40,16 @@ The certified runtime policy maps both `auto` and `cpu` to the all-CPU path.
 CPU and LightGlue moves to Metal. The pinned runtime does not select MPS
 automatically because the current Strecha smoke benchmarks show a regression in
 matching time and peak memory.
+
+## Exact Python wheel inventory
+
+The following is the complete hash-locked wheel closure for macOS arm64.
+The signed installer uses these same versions and SHA-256 values. Each
+distribution retains its complete license files and bundled-library notices.
+
+| Distribution / source index | Version | Artifact SHA-256 |
+|---|---|---|
+
+The Python 3.11.11 base and system-library artifacts are fixed in the signed
+Conda explicit lock. The installation recipe is the public `install.sh`;
+upstream attribution and license locations are in `THIRD_PARTY_NOTICES.md`.
