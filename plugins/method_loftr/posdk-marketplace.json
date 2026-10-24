@@ -3,7 +3,7 @@
   "plugin_key": "method_loftr",
   "name": "LoFTR",
   "plugin_type": "method",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "group": "SfM/Feature Extraction and Matching",
   "summary": "LoFTR feature matching with SSH server execution, transfer progress, verified results and optional local inference.",
   "install_script": "install.sh",

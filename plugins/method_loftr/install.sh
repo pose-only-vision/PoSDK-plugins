@@ -6,7 +6,7 @@ umask 077
 [ "${3:-}" = "${POSDK_INSTALL_REPORT:-}" ] || exit 64
 [ "${POSDK_INSTALL_PROTOCOL:-}" = "posdk.package-install.v1" ] || exit 64
 : "${POSDK_PACKAGE_ROOT:?}" "${POSDK_INSTALL_STATE_ROOT:?}" "${POSDK_PLUGIN_ID:?}" "${POSDK_TARGET_SYSTEM:?}" "${POSDK_TARGET_ARCH:?}"
-[ "$POSDK_PLUGIN_ID" = method_loftr ] && [ "${POSDK_PLUGIN_VERSION:-}" = 0.3.0 ] || exit 65
+[ "$POSDK_PLUGIN_ID" = method_loftr ] && [ "${POSDK_PLUGIN_VERSION:-}" = 0.3.1 ] || exit 65
 [ "$POSDK_TARGET_SYSTEM" = macos ] && [ "$POSDK_TARGET_ARCH" = arm64 ] || exit 65
 [ "${POSDK_INSTALL_NETWORK:-0}" = 1 ] || exit 69
 

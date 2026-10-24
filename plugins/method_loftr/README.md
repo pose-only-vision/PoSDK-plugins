@@ -1,4 +1,8 @@
-# LoFTR matching
+# LoFTR for PoMVG
+
+**Plugin integration author / 插件集成作者:** qi Cai
+
+**Contact / 联系邮箱:** <qicaiCN@gmail.com>
 
 This plugin outputs original-image pixel coordinates and a shared feature ID
 space for each image. Pair-conditioned LoFTR coordinates must be associated
@@ -6,7 +10,7 @@ before building multiview tracks.
 
 ## SSH execution (default)
 
-Version 0.3.0 defaults to `execution_backend=ssh` and `ssh_target=remoteMAC`.
+Version 0.3.1 defaults to `execution_backend=ssh` and `ssh_target=remoteMAC`.
 The public package contains this alias, not a maintainer's host address,
 username, private key, or private filesystem paths. Configure the alias in
 your own `~/.ssh/config` and verify the server's host key with OpenSSH first.
@@ -31,7 +35,7 @@ NumPy 1.26.4, and OpenCV 4.10.0. An official CUDA build suffix is accepted for
 torch/torchvision. `ssh_python_executable` can point directly at that remote
 environment's `env/bin/python3.11`; `current` is an optional convenience link
 to the environment root. Installing this native macOS plugin on the remote
-Mac with PoSDK's signed installer also prepares that environment. Use
+Mac with PoMVG's signed plugin installer also prepares that environment. Use
 `posdk plugin paths --id method_loftr` on the server to locate it. A Linux
 inference server can use an independently prepared environment with these
 same versions; the downloadable native plugin itself targets macOS arm64.
@@ -128,9 +132,9 @@ do not require changing the default SIFT workflow.
 Semi-dense matching describes the resized network input. More pair matches do
 not guarantee more consistent multiview tracks or triangulated 3D points.
 
-# LoFTR 匹配
+# PoMVG LoFTR 匹配
 
-0.3.0 默认通过 `remoteMAC` SSH 别名执行。连接使用本机 OpenSSH 配置、密钥或
+0.3.1 默认通过 `remoteMAC` SSH 别名执行。连接使用本机 OpenSSH 配置、密钥或
 代理，严格检查服务器主机密钥；公开包不包含维护者的私有服务器地址或私钥。
 `ssh_python_executable` 填写远端锁定版本的 LoFTR 环境中的 Python，
 `ssh_work_dir` 是服务器工作目录，`ssh_checkpoint_path` 可选指定服务器权重。
@@ -166,6 +170,28 @@ SSH 模式下，匹配缓存和基础缓存参数均填写服务器路径。
 各次重试记录在 `rotation_provenance.json`，后续仍需进行标定双视图和多视图验证。
 
 半稠密是相对于网络输入图像而言，最终三维点数还取决于多视图关联、几何一致性和三角化。
+
+## Third-party dependencies / 第三方依赖
+
+**qi Cai is the PoMVG integration author.** The original LoFTR authors are
+Jiaming Sun, Zehong Shen, Yu'ang Wang, Hujun Bao and Xiaowei Zhou. This plugin
+runs Kornia 0.7.4's LoFTR implementation and the original dual-softmax models.
+
+| Component | Fixed version | Role | License / notice |
+|---|---|---|---|
+| LoFTR / Kornia | Kornia 0.7.4 | Learned image correspondence; indoor and outdoor checkpoints | Original LoFTR and Kornia attribution; Apache-2.0 source licenses |
+| CPython | 3.11.11 | Isolated interpreter | Python and bundled notices |
+| PyTorch / torchvision | 2.2.2 / 0.17.2 | Model execution | Aggregate distribution licenses and notices |
+| NumPy | 1.26.4 | Arrays and output coordinates | Aggregate and component license texts |
+| OpenCV Python headless | 4.10.0.84 | Image processing and optional pair geometry | Wrapper and bundled-library license texts |
+| micromamba | 2.3.2, installation fallback | Environment creation | BSD-3-Clause and bundled notices |
+| OpenSSH | System-provided | Optional SSH transport | System distribution; no client binary or key is bundled |
+
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for original authors,
+source links, checkpoint URLs/hashes and full license locations. The complete
+locked package inventory and installation recipe are in
+[deps/README.md](deps/README.md). LoFTR and Kornia are separate upstream
+projects; their authorship is preserved alongside the PoMVG integration credit.
 
 References:
 
