@@ -1,14 +1,25 @@
 {
-  "author": "",
+  "author": "qi Cai",
   "base_class": "MethodPresetProfiler",
   "config_files": [
     "configs/methods/method_rotation_averaging.ini"
   ],
+  "copyright": {
+    "additionalNotices": "# Rotation Averaging third-party notices / 第三方依赖声明\n\n**PoMVG plugin integration author:** qi Cai\n\n**Contact:** <qicaiCN@gmail.com>\n\nThe PoMVG integration author is separate from the authors and copyright\nholders of the rotation-averaging algorithms and their dependencies. The\nplugin's existing `LicenseRef-PoSDK-Proprietary` notice remains in `LICENSE.md`;\nit does not replace any third-party license.\n\n## GraphOptim backend\n\n- Source: <https://github.com/AIBluefisher/GraphOptim>.\n- Pinned revision: `9d932464831bff46b1b5a118ececb2e00c42d5c6`.\n- Upstream copyright: Copyright (c) 2022, Chenyu; BSD-3-Clause.\n- Source/license: <https://github.com/AIBluefisher/GraphOptim/blob/9d932464831bff46b1b5a118ececb2e00c42d5c6/LICENSE>.\n- Purpose: the optional external `rotation_estimator` backend.\n- The signed package embeds the source with host-compatibility changes at\n  `deps/GraphOptim-source.tar.gz`, SHA-256\n  `e3a3bd61123091a6ebb254c5517fd3b83c0834b74c4ea87cee316b8ff25c5251`.\n- The upstream license remains in that source archive and the installed source\n  tree. The installer builds the selected executable in plugin-private state\n  and returns the verified `graphoptim_bin` binding.\n\n## Build and linked dependencies\n\nGraphOptim's build prerequisites are CMake, Eigen, Ceres Solver, glog, gflags,\nSuiteSparse, libomp, TBB and METIS. They are supplied by Homebrew on the supported\nmacOS arm64 target; they are not relabeled as PoMVG-authored components.\nSources: <https://cmake.org/>, <https://gitlab.com/libeigen/eigen>,\n<https://github.com/ceres-solver/ceres-solver>, <https://github.com/google/glog>,\n<https://github.com/gflags/gflags>, <https://github.com/DrTimothyAldenDavis/SuiteSparse>,\n<https://github.com/llvm/llvm-project/tree/main/openmp>,\n<https://github.com/oneapi-src/oneTBB> and <https://github.com/KarypisLab/METIS>.\n\nThe installer records the actual formula versions and toolchain in its local\nbuild contract. A changed contract triggers a rebuild; these prerequisites\nare not claimed to have one immutable version across all user installations.\nTheir complete formula/distribution license and component notices remain\napplicable, including licenses for bundled or linked subcomponents. Consult\n`deps/README.md`, the installed build contract and the exact distributions.\n\n## Chatterjee and host runtime\n\nThe `chatterjee` selection delegates to the host-provided\n`method_rotation_averaging_chatterjee` plugin; this package does not copy its\nimplementation. The underlying method is credited to Avishek Chatterjee and\nVenu Madhav Govindu. Its own host distribution supplies the implementation\nand notices. The matching PoMVG host also supplies the PoSDK plugin API;\nthese host dependencies are separate from GraphOptim's private installation.\n\n插件集成由 qi Cai 维护。GraphOptim、Chatterjee 方法及各构建/运行库保留上游作者\n和许可证；源码提交、归档哈希与实际构建版本分别记录，避免把上游算法署名为\n插件作者，也不把系统提供的依赖描述成插件自带组件。",
+    "author": "qi Cai",
+    "copyrightId": "PoMVG/method_rotation_averaging",
+    "customLicenseText": "# License notice\n\nThe `method_rotation_averaging` PoSDK plugin binary is proprietary software.\nCopyright and all rights in the plugin implementation are reserved by the\npublisher. Distribution of the signed package does not grant access to or a\nlicense for the plugin source code.\n\nThe package also builds and uses third-party open-source software. Those\ncomponents are not covered by this proprietary notice and remain governed by\ntheir own licenses. In particular, GraphOptim is distributed under the\nBSD-3-Clause license; its source revision and build disclosure are documented\nin `deps/README.md`.",
+    "email": "qicaiCN@gmail.com",
+    "holder": "Qi Cai",
+    "license": "LicenseRef-Custom",
+    "schema": "posdk.plugin-copyright.v1",
+    "year": "2024"
+  },
   "description": "Rotation averaging method plugin.",
   "display_name": "Rotation Averaging",
   "format_version": 1,
   "group": "SfM/Optimization",
-  "homepage": "",
+  "homepage": "https://posdk.net",
   "input_types": [
     "data_relative_poses"
   ],
@@ -16,13 +27,10 @@
   "min_posdk_version": "1.0.0",
   "name": "method_rotation_averaging",
   "output_types": [
-    "data_global_poses"
-  ],
-  "supported_systems": [
-    "macos"
-  ],
-  "supported_arches": [
-    "arm64"
+    "data_global_poses",
+    "data_relative_poses",
+    "data_relative_rotations",
+    "data_pose_graph_quality"
   ],
   "plugin_files": [
     "plugins/methods/posdk_plugin_method_rotation_averaging.dylib",
@@ -31,11 +39,17 @@
   "plugin_type": "method",
   "runtime_dependencies": [
     {
-      "section": "method_rotation_averaging",
       "config_key": "chatterjee_method",
-      "kind": "method"
+      "kind": "method",
+      "section": "method_rotation_averaging"
     }
   ],
+  "supported_arches": [
+    "arm64"
+  ],
+  "supported_systems": [
+    "macos"
+  ],
   "tags": [],
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
