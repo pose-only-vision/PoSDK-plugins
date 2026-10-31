@@ -1,0 +1,53 @@
+{
+  "author": "qi Cai",
+  "base_class": "MethodPresetProfiler",
+  "config_files": [
+    "configs/methods/method_superpoint_lightglue.ini"
+  ],
+  "copyright": {
+    "schema": "posdk.plugin-copyright.v1",
+    "copyrightId": "PoMVG/method_superpoint_lightglue",
+    "holder": "VINF-SJTU",
+    "author": "qi Cai",
+    "year": "2026",
+    "license": "MPL-2.0",
+    "email": "qicaiCN@gmail.com",
+    "additionalNotices": "# Third-party notices\n\nThe wrapper integration is derived from the VINF-SJTU PoSDK ALIKEDLightGlue\nfrontend, maintained by qi Cai, under MPL-2.0. The wrapper contains no upstream\nmodel implementation or weights. The signed installer retrieves pinned upstream\ndependencies into a version-specific private runtime.\n\nSuperPoint (Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich; Magic Leap)\nand its weights are subject to the upstream noncommercial research license:\nhttps://github.com/magicleap/SuperPointPretrainedNetwork/blob/master/LICENSE\nThe full license is included as licenses/SuperPoint-LICENSE.txt. Installing the\nplugin does not grant additional rights to SuperPoint. Users must have the\nrights required by that license before installing or using the dependency.\n\nLightGlue (Philipp Lindenberger, Paul-Edouard Sarlin, Marc Pollefeys; ETH Zurich)\nis Apache-2.0, except for separately licensed feature extractors.\nSource commit: eb42fee2d71449efb0aa5c10549752b5d75384d8.\nhttps://github.com/cvg/LightGlue\n\nPython 3.11.11, PyTorch 2.2.2, torchvision 0.17.2, NumPy 1.26.4,\nKornia 0.6.12 and Pillow 12.3.0 retain their upstream licenses.\nExact Conda and wheel versions/hashes are in deps/*.lock. Verbatim wheel license\nand notice snapshots are included under licenses/runtime/.\n",
+    "customLicenseText": ""
+  },
+  "description": "SuperPoint + LightGlue with stable multiview feature IDs, local and SSH execution, and pinned research dependencies.",
+  "display_name": "SuperPoint + LightGlue",
+  "format_version": 1,
+  "group": "SfM/Feature Extraction and Matching",
+  "homepage": "https://posdk.net",
+  "input_types": [
+    "data_images"
+  ],
+  "license": "MPL-2.0 AND Apache-2.0 AND LicenseRef-SuperPoint-Noncommercial",
+  "min_posdk_version": "2.0.0",
+  "name": "method_superpoint_lightglue",
+  "output_types": [
+    "data_features",
+    "data_matches"
+  ],
+  "plugin_files": [
+    "plugins/methods/posdk_plugin_method_superpoint_lightglue.dylib",
+    "plugins/methods/posdk_plugin_method_superpoint_lightglue.posdk.json"
+  ],
+  "plugin_type": "method",
+  "supported_arches": [
+    "arm64"
+  ],
+  "supported_systems": [
+    "macos"
+  ],
+  "tags": [
+    "experimental",
+    "feature-extraction",
+    "feature-matching",
+    "superpoint",
+    "lightglue",
+    "sfm"
+  ],
+  "version": "0.1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "plugin_key": "method_superpoint_lightglue",
+  "name": "SuperPoint + LightGlue",
+  "plugin_type": "method",
+  "version": "0.1.0",
+  "group": "SfM/Feature Extraction and Matching",
+  "summary": "Research-use SuperPoint + LightGlue frontend with stable feature IDs, isolated dependencies, local inference and verified SSH result transfer.",
+  "install_script": "install.sh",
+  "publisher_key": "publisher-key.pem",
+  "distribution_model": "closed_plugin_open_dependencies",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ]
+}
