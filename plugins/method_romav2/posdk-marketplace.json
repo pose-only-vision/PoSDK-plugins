@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "plugin_key": "method_romav2",
+  "name": "RoMa v2",
+  "plugin_type": "method",
+  "version": "0.1.0",
+  "group": "SfM/Feature Extraction and Matching",
+  "summary": "Official pretrained RoMa v2 dense matching over SSH. Original research: Johan Edstedt, David Nordström et al.; Linköping, Chalmers, Amsterdam and Lund (arXiv2025). PoSDK integration: qi Cai. Model inference stays on the configured remote host.",
+  "install_script": "install.sh",
+  "publisher_key": "publisher-key.pem",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ],
+  "distribution_model": "closed_plugin_open_dependencies"
+}

@@ -1,0 +1,50 @@
+{
+  "author": "qi Cai",
+  "base_class": "MethodPresetProfiler",
+  "config_files": [
+    "configs/methods/method_romav2.ini"
+  ],
+  "copyright": {
+    "additionalNotices": "# Third-party notices\n\nPoSDK integration: qi Cai. Upstream algorithm authorship is preserved.\n\n<!-- posdk:upstream-research:v1:start -->\n## Original research and authors / 原论文与原作团队\n\n**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.\n\n### RoMa v2: Harder Better Faster Denser Feature Matching\n\n- **Authors / 原作者：** Johan Edstedt, David Nordström, Yushan Zhang, Georg Bökman, Jonathan Astermark, Viktor Larsson, Anders Heyden, Fredrik Kahl, Mårten Wadenbäck, Michael Felsberg.\n- **Team / 团队：** Linköping University; Chalmers University of Technology; University of Amsterdam; Lund University.\n- **Publication / 论文：** 2025 · arXiv preprint.\n- **Paper / 原文：** [RoMa v2: Harder Better Faster Denser Feature Matching](https://arxiv.org/abs/2511.15706).\n- **Official project or implementation / 原作项目或实现：** [https://github.com/Parskatt/RoMaV2](https://github.com/Parskatt/RoMaV2).\n\nThe matcher is the original pretrained **RoMa v2 v2.0.1**. DINOv3 is a separate Meta foundation-model dependency with its own license. MV-RoMa and learned PoGT adapters are not part of this plugin.\n\nAttribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.\n<!-- posdk:upstream-research:v1:end -->\n# Upstream provenance\n\nPoMVG integration maintainer: qi Cai. Upstream model authorship is preserved.\n\n- RoMa v2: Johan Edstedt and the coauthors in the upstream README;\n  https://github.com/Parskatt/RoMaV2 ; MIT (Copyright 2025 Johan Edstedt).\n  Revision `95c9968145c8906b7b59383258e9f73b02853d89`, model v2.0.1:\n  https://github.com/Parskatt/RoMaV2/releases/download/v2.0.1/romav2.0.1.pt .\n- DINOv3: Meta and upstream contributors;\n  https://github.com/facebookresearch/dinov3 ; revision\n  `adc254450203739c8149213a7a69d8d905b4fcfa`. The separate upstream\n  `LICENSE.md` applies; DINOv3 is not covered by RoMa's MIT license.\n- PyTorch, torchvision, NumPy, Pillow and einops retain all upstream licenses\n  and notices in their installed distributions. Runtime versions and source\n  and model hashes are recorded by each successful worker run.\n\nThis development plugin does not redistribute model weights or DINOv3. The\nexplicitly selected remote runtime supplies them. A future downloadable\npackage requires complete license texts and a locked isolated installer.",
+    "author": "qi Cai",
+    "copyrightId": "PoSDK/method_romav2",
+    "customLicenseText": "# License notice\n\nThe `method_romav2` PoSDK plugin binary is proprietary software.\nCopyright and all rights in the plugin implementation are reserved by the\npublisher. Distribution of the signed package does not grant access to or a\nlicense for the plugin source code.\n\nThe package also builds and uses third-party open-source software. Those\ncomponents are not covered by this proprietary notice and remain governed by\ntheir own licenses. The upstream model code, source-available foundation models and other dependencies\nretain their individual license terms, source revisions and build disclosures in `deps/README.md`.",
+    "email": "qicaiCN@gmail.com",
+    "holder": "qi Cai",
+    "license": "LicenseRef-Custom",
+    "schema": "posdk.plugin-copyright.v1",
+    "year": "2026"
+  },
+  "description": "Official pretrained RoMa v2 dense matching over SSH; the local client uses only the Python standard library.",
+  "display_name": "RoMa v2",
+  "format_version": 1,
+  "group": "SfM/Feature Extraction and Matching",
+  "homepage": "https://posdk.net",
+  "input_types": [
+    "data_images"
+  ],
+  "license": "LicenseRef-Custom",
+  "min_posdk_version": "2.1.1",
+  "name": "method_romav2",
+  "output_types": [
+    "data_features",
+    "data_matches"
+  ],
+  "plugin_files": [
+    "plugins/methods/posdk_plugin_method_romav2.dylib",
+    "plugins/methods/posdk_plugin_method_romav2.posdk.json"
+  ],
+  "plugin_type": "method",
+  "supported_arches": [
+    "arm64"
+  ],
+  "supported_systems": [
+    "macos"
+  ],
+  "tags": [
+    "romav2",
+    "dense-matching",
+    "remote-inference"
+  ],
+  "version": "0.1.0"
+}
