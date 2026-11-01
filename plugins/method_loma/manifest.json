@@ -1,0 +1,51 @@
+{
+  "author": "qi Cai",
+  "base_class": "MethodPresetProfiler",
+  "config_files": [
+    "configs/methods/method_loma.ini"
+  ],
+  "copyright": {
+    "additionalNotices": "# Third-party notices\n\nPoSDK integration: qi Cai. Upstream algorithm authorship is preserved.\n\n<!-- posdk:upstream-research:v1:start -->\n## Original research and authors / 原论文与原作团队\n\n**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.\n\n### LoMa: Local Feature Matching Revisited\n\n- **Authors / 原作者：** David Nordström, Johan Edstedt, Georg Bökman, Jonathan Astermark, Anders Heyden, Viktor Larsson, Mårten Wadenbäck, Michael Felsberg, Fredrik Kahl.\n- **Team / 团队：** Chalmers University of Technology; Linköping University; University of Amsterdam; Lund University.\n- **Publication / 论文：** 2026 · ECCV 2026.\n- **Paper / 原文：** [LoMa: Local Feature Matching Revisited](https://arxiv.org/abs/2604.04931).\n- **Official project or implementation / 原作项目或实现：** [https://github.com/davnords/LoMa](https://github.com/davnords/LoMa).\n\nThis plugin currently exposes **LoMa-B / DaD + DeDoDe-G**, using ONNX assets published by the original authors and a COLMAP-compatible adapter. It does not advertise LoMa-L, LoMa-G or MVLoMa support.\n\nAttribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.\n<!-- posdk:upstream-research:v1:end -->\n\n## Separate components and licenses\n\n- LoMa source and DaD/DeDoDe components: original authors; MIT except the\n  LightGlue-derived matcher, which retains Apache-2.0.\n- ONNX assets are retrieved from the original authors' davnords/storage\n  release and SHA256-verified; no model weights are embedded in the plugin.\n- COLMAP: BSD-3-Clause. The independent Python adapter follows the pinned\n  LoMa ONNX input/output and Bitmap resampling contract.\n- ONNX Runtime: Microsoft and contributors; MIT. CoreML: Apple platform framework.\n- Python, NumPy, Pillow, pycolmap and their dependencies retain their\n  individual distribution notices in the remote isolated environment.",
+    "author": "qi Cai",
+    "copyrightId": "PoSDK/method_loma",
+    "customLicenseText": "# License notice\n\nThe `method_loma` PoSDK plugin binary is proprietary software.\nCopyright and all rights in the plugin implementation are reserved by the\npublisher. Distribution of the signed package does not grant access to or a\nlicense for the plugin source code.\n\nThe package also builds and uses third-party open-source software. Those\ncomponents are not covered by this proprietary notice and remain governed by\ntheir own licenses. The upstream model code, source-available foundation models and other dependencies\nretain their individual license terms, source revisions and build disclosures in `deps/README.md`.",
+    "email": "qicaiCN@gmail.com",
+    "holder": "qi Cai",
+    "license": "LicenseRef-Custom",
+    "schema": "posdk.plugin-copyright.v1",
+    "year": "2026"
+  },
+  "description": "LoMa-B sparse matching with official ONNX weights, persistent per-image feature IDs and remote CPU/CoreML execution.",
+  "display_name": "LoMa-B",
+  "format_version": 1,
+  "group": "SfM/Feature Extraction and Matching",
+  "homepage": "https://posdk.net",
+  "input_types": [
+    "data_images"
+  ],
+  "license": "LicenseRef-Custom",
+  "min_posdk_version": "2.1.1",
+  "name": "method_loma",
+  "output_types": [
+    "data_features",
+    "data_matches"
+  ],
+  "plugin_files": [
+    "plugins/methods/posdk_plugin_method_loma.dylib",
+    "plugins/methods/posdk_plugin_method_loma.posdk.json"
+  ],
+  "plugin_type": "method",
+  "supported_arches": [
+    "arm64"
+  ],
+  "supported_systems": [
+    "macos"
+  ],
+  "tags": [
+    "loma",
+    "sparse-matching",
+    "onnx",
+    "remote-inference"
+  ],
+  "version": "0.1.0"
+}

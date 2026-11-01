@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "plugin_key": "method_loma",
+  "name": "LoMa-B",
+  "plugin_type": "method",
+  "version": "0.1.0",
+  "group": "SfM/Feature Extraction and Matching",
+  "summary": "LoMa-B sparse matching over SSH with persistent per-image feature IDs. Original research: David Nordström, Johan Edstedt et al.; Chalmers, Linköping, Amsterdam and Lund (ECCV2026). PoSDK integration: qi Cai. Configured remote runtime required.",
+  "install_script": "install.sh",
+  "publisher_key": "publisher-key.pem",
+  "supported_systems": [
+    "macos"
+  ],
+  "supported_arches": [
+    "arm64"
+  ],
+  "distribution_model": "closed_plugin_open_dependencies"
+}
