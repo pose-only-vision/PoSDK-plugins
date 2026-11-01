@@ -42,7 +42,7 @@ tracks.
 
 ## Platform and installation
 
-- PoMVG with the PoSDK 2.0 or newer plugin API
+- PoMVG with Factory/plugin ABI 2/2 (PoSDK 2.1.1); ABI1 hosts are incompatible
 - macOS on Apple silicon (`arm64`)
 - Marketplace `.pospkg` installation only; it is not bundled into the PoMVG
   App

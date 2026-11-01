@@ -54,7 +54,7 @@ the verified directory to `graphoptim_bin_folder`.
 
 ## Supported target
 
-- PoMVG with the PoSDK 2.0 or newer plugin API
+- PoMVG with Factory/plugin ABI 2/2 (PoSDK 2.1.1); ABI1 hosts are incompatible
 - macOS on Apple Silicon (`arm64`)
 - Homebrew and Xcode Command Line Tools for the GraphOptim source build
 
