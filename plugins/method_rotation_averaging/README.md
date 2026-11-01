@@ -1,5 +1,31 @@
 # Rotation Averaging for PoMVG
 
+<!-- posdk:upstream-research:v1:start -->
+## Original research and authors / 原论文与原作团队
+
+**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+
+### Efficient and Robust Large-Scale Rotation Averaging
+
+- **Authors / 原作者：** Avishek Chatterjee, Venu Madhav Govindu.
+- **Team / 团队：** Indian Institute of Science, Bengaluru.
+- **Publication / 论文：** 2013 · ICCV.
+- **Paper / 原文：** [Efficient and Robust Large-Scale Rotation Averaging](https://openaccess.thecvf.com/content_iccv_2013/html/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.html).
+- **Official project or implementation / 原作项目或实现：** [https://ee.iisc.ac.in/cvlab/research/rotaveraging/](https://ee.iisc.ac.in/cvlab/research/rotaveraging/).
+
+### Hybrid Rotation Averaging: A Fast and Robust Rotation Averaging Approach
+
+- **Authors / 原作者：** Yu Chen, Ji Zhao, Laurent Kneip.
+- **Team / 团队：** GraphOptim original author team.
+- **Publication / 论文：** 2021 · CVPR.
+- **Paper / 原文：** [Hybrid Rotation Averaging: A Fast and Robust Rotation Averaging Approach](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Hybrid_Rotation_Averaging_A_Fast_and_Robust_Rotation_Averaging_Approach_CVPR_2021_paper.html).
+- **Official project or implementation / 原作项目或实现：** [https://github.com/AIBluefisher/GraphOptim](https://github.com/AIBluefisher/GraphOptim).
+
+The Chatterjee and GraphOptim backends are distinct implementations. The host supplies the Chatterjee child plugin; GraphOptim is installed from its pinned upstream source.
+
+Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
+<!-- posdk:upstream-research:v1:end -->
+
 **Plugin integration author / 插件集成作者:** qi Cai
 
 **Contact / 联系邮箱:** <qicaiCN@gmail.com>

@@ -1,5 +1,23 @@
 # DegensacTwoViewEstimator Plugin
 
+<!-- posdk:upstream-research:v1:start -->
+## Original research and authors / 原论文与原作团队
+
+**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+
+### Two-view Geometry Estimation Unaffected by a Dominant Plane
+
+- **Authors / 原作者：** Ondřej Chum, Tomáš Werner, Jiří Matas.
+- **Team / 团队：** Center for Machine Perception, Czech Technical University in Prague.
+- **Publication / 论文：** 2005 · CVPR.
+- **Paper / 原文：** [Two-view Geometry Estimation Unaffected by a Dominant Plane](https://cmp.felk.cvut.cz/~werner/papers/chum-degen-cvpr05.pdf).
+- **Official project or implementation / 原作项目或实现：** [https://github.com/ducha-aiki/pydegensac](https://github.com/ducha-aiki/pydegensac).
+
+The DEGENSAC paper authors and later pydegensac implementation contributors are separate credits. Preserve the pinned implementation notices and licensing below.
+
+Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
+<!-- posdk:upstream-research:v1:end -->
+
 Degensac两视图位姿估计插件（**纯C++版本**），直接调用Degensac C代码，无需Python依赖。
 
 从 `1.1.1` 起，本插件按 PoSDK Marketplace 的
@@ -170,3 +188,7 @@ sudo apt-get install liblapack-dev libblas-dev libopenblas-dev
 ## 作者
 
 Qi Cai <qicaiCN@gmail.com>
+
+## Compatibility audit (2026-11-01)
+
+The published v1.1.1 binary targets plugin ABI1. Current PoSDK2.1.1 uses Factory/plugin ABI2/2, so that legacy binary is not compatible with the current runtime. This plugin is not in the current Marketplace inventory. This documentation-only attribution update preserves the released package and its SHA256.

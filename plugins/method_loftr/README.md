@@ -1,5 +1,21 @@
 # LoFTR for PoMVG
 
+<!-- posdk:upstream-research:v1:start -->
+## Original research and authors / 原论文与原作团队
+
+**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+
+### LoFTR: Detector-Free Local Feature Matching with Transformers
+
+- **Authors / 原作者：** Jiaming Sun, Zehong Shen, Yuang Wang, Hujun Bao, Xiaowei Zhou.
+- **Team / 团队：** Zhejiang University CAD & CG; SenseTime Research.
+- **Publication / 论文：** 2021 · CVPR.
+- **Paper / 原文：** [LoFTR: Detector-Free Local Feature Matching with Transformers](https://zju3dv.github.io/loftr/).
+- **Official project or implementation / 原作项目或实现：** [https://github.com/zju3dv/LoFTR](https://github.com/zju3dv/LoFTR).
+
+Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
+<!-- posdk:upstream-research:v1:end -->
+
 **Plugin integration author / 插件集成作者:** qi Cai
 
 **Contact / 联系邮箱:** <qicaiCN@gmail.com>

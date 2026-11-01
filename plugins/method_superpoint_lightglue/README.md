@@ -1,5 +1,29 @@
 # SuperPoint + LightGlue for PoSDK
 
+<!-- posdk:upstream-research:v1:start -->
+## Original research and authors / 原论文与原作团队
+
+**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+
+### SuperPoint: Self-Supervised Interest Point Detection and Description
+
+- **Authors / 原作者：** Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich.
+- **Team / 团队：** Magic Leap.
+- **Publication / 论文：** 2018 · CVPR Workshops.
+- **Paper / 原文：** [SuperPoint: Self-Supervised Interest Point Detection and Description](https://openaccess.thecvf.com/content_cvpr_2018_workshops/w9/html/DeTone_SuperPoint_Self-Supervised_Interest_CVPR_2018_paper.html).
+- **Official project or implementation / 原作项目或实现：** [https://github.com/magicleap/SuperPointPretrainedNetwork](https://github.com/magicleap/SuperPointPretrainedNetwork).
+
+### LightGlue: Local Feature Matching at Light Speed
+
+- **Authors / 原作者：** Philipp Lindenberger, Paul-Edouard Sarlin, Marc Pollefeys.
+- **Team / 团队：** ETH Zurich Computer Vision and Geometry Group.
+- **Publication / 论文：** 2023 · ICCV.
+- **Paper / 原文：** [LightGlue: Local Feature Matching at Light Speed](https://openaccess.thecvf.com/content/ICCV2023/html/Lindenberger_LightGlue_Local_Feature_Matching_at_Light_Speed_ICCV_2023_paper.html).
+- **Official project or implementation / 原作项目或实现：** [https://github.com/cvg/LightGlue](https://github.com/cvg/LightGlue).
+
+Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
+<!-- posdk:upstream-research:v1:end -->
+
 Dataset-level frontend: data_images -> data_features + data_matches. Each image
 is extracted once; every pair reuses its stable feature indices. Coordinates
 are restored to the original image with the upstream pixel-center convention.

@@ -1,5 +1,29 @@
 # ALIKED + LightGlue for PoMVG
 
+<!-- posdk:upstream-research:v1:start -->
+## Original research and authors / 原论文与原作团队
+
+**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+
+### ALIKED: A Lighter Keypoint and Descriptor Extraction Network via Deformable Transformation
+
+- **Authors / 原作者：** Xiaoming Zhao, Xingming Wu, Weihai Chen, Peter C. Y. Chen, Qingsong Xu, Zhengguo Li.
+- **Team / 团队：** ALIKED original author team.
+- **Publication / 论文：** 2023 · IEEE Transactions on Instrumentation and Measurement.
+- **Paper / 原文：** [ALIKED: A Lighter Keypoint and Descriptor Extraction Network via Deformable Transformation](https://arxiv.org/abs/2304.03608).
+- **Official project or implementation / 原作项目或实现：** [https://github.com/Shiaoming/ALIKED](https://github.com/Shiaoming/ALIKED).
+
+### LightGlue: Local Feature Matching at Light Speed
+
+- **Authors / 原作者：** Philipp Lindenberger, Paul-Edouard Sarlin, Marc Pollefeys.
+- **Team / 团队：** ETH Zurich Computer Vision and Geometry Group.
+- **Publication / 论文：** 2023 · ICCV.
+- **Paper / 原文：** [LightGlue: Local Feature Matching at Light Speed](https://openaccess.thecvf.com/content/ICCV2023/html/Lindenberger_LightGlue_Local_Feature_Matching_at_Light_Speed_ICCV_2023_paper.html).
+- **Official project or implementation / 原作项目或实现：** [https://github.com/cvg/LightGlue](https://github.com/cvg/LightGlue).
+
+Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
+<!-- posdk:upstream-research:v1:end -->
+
 **Plugin integration author / 插件集成作者:** qi Cai
 
 **Contact / 联系邮箱:** <qicaiCN@gmail.com>
