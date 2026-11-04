@@ -1,17 +1,5 @@
 # SuperPoint + LightGlue for PoSDK
 
-<!-- posdk:published-source:start -->
-## 插件源码 / Plugin source
-
-当前已发布版本 **0.1.0** 的插件源码在 [`src/`](src/)；外部依赖锁定与安装说明在 [`deps/`](deps/)。
-
-- [阅读 C++、Python 和配置源码](src/)
-- [构建说明](src/README.md)
-- [源码文件与 SHA-256 清单](src/source-manifest.json)
-
-<!-- posdk:published-source:end -->
-
-
 <!-- posdk:upstream-research:v1:start -->
 ## Original research and authors / 原论文与原作团队
 
@@ -70,3 +58,16 @@ are obtained separately under the licenses and pinned recipes in this package.
 SuperPoint has a restrictive noncommercial research license. Read
 THIRD_PARTY_NOTICES.md and deps/SUPERPOINT-LICENSE.txt before installation.
 The PoSDK wrapper license does not override the upstream license.
+
+## Source publication for 0.1.1
+
+Plugin-owned C++, Python, CMake and configuration source is published in `src/`.
+Pinned dependency locks, public source references, licenses and installer recipes
+are published in sibling `deps/`. The signed package binds this exact public file
+snapshot; no other plugin or PoSDK project history is included.
+
+For a standalone source build, copy the contents of `src/` to a separate build
+workspace and restore sibling `deps/` there before configuring with the matching
+PoSDK Plugin SDK. The signed binary installer uses its own immutable resources.
+SuperPoint remains subject to its noncommercial research license; publication
+does not change the dependency licenses.

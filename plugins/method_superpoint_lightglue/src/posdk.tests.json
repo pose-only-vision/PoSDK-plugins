@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "plugin": {
+    "id": "method_superpoint_lightglue",
+    "kind": "method"
+  },
+  "resources": [],
+  "profiles": {
+    "quick": [
+      "runtime_contract",
+      "worker_protocol"
+    ],
+    "standard": [
+      "runtime_contract",
+      "worker_protocol"
+    ]
+  },
+  "cases": [
+    {
+      "id": "runtime_contract",
+      "title": "Runtime compatibility gate | 运行兼容性门禁",
+      "description": "Pins the exact native generation and validates identity, ABI, architecture, manifests, runtime files, and safe loading. It does not prove SuperPoint or LightGlue accuracy. | 固定原生插件的精确 generation，验证身份、ABI、架构、manifest、运行文件与安全加载；不证明 SuperPoint 或 LightGlue 精度。",
+      "driver": "snapshot",
+      "timeout_seconds": 30,
+      "repeat": 1,
+      "seed": 31
+    },
+    {
+      "id": "worker_protocol",
+      "title": "Bounded worker protocol and stable feature IDs | 有界 worker 协议与稳定特征 ID",
+      "description": "Checks strict source/model/device/Pillow-decoder identity, the certified auto-to-CPU policy, explicit experimental MPS identity, bounded binary parsing, malformed-result rejection, match-index validation, and stable per-image indices without loading neural models. | 检查严格的源码/模型/设备/Pillow 解码器身份、已认证的 auto-to-CPU 策略、显式实验 MPS 身份、有界二进制解析、畸形结果拒绝、匹配索引验证及稳定的每图索引，不加载神经网络。",
+      "driver": "gtest",
+      "timeout_seconds": 60,
+      "repeat": 1,
+      "seed": 31,
+      "executable": "output/bin/plugin-tests/test_method_superpoint_lightglue",
+      "arguments": [
+        "--gtest_filter=SuperPointLightGlueProtocolTest.*"
+      ],
+      "evidence": {
+        "kind": "functional"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "privilege": "user",
+  "network": true,
+  "timeout_seconds": 3600,
+  "resources": [
+    "deps/conda-osx-arm64.lock",
+    "deps/requirements-osx-arm64.lock",
+    "deps/install-smoke.py"
+  ],
+  "configuration_bindings": [
+    {
+      "id": "python_bin",
+      "config_path": "configs/methods/method_superpoint_lightglue.ini",
+      "section": "method_superpoint_lightglue",
+      "key": "python_bin_folder",
+      "kind": "directory",
+      "required_executable": "python3.11"
+    }
+  ]
+}

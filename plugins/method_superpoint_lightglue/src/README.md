@@ -1,25 +1,73 @@
-# SuperPoint + LightGlue — 插件源码 / Plugin source
+# SuperPoint + LightGlue for PoSDK
 
-对应市场版本：**0.1.0**，发布标签：[`posdk-method_superpoint_lightglue-v0.1.0`](https://github.com/pose-only-vision/PoSDK-plugins/releases/tag/posdk-method_superpoint_lightglue-v0.1.0)。
+<!-- posdk:upstream-research:v1:start -->
+## Original research and authors / 原论文与原作团队
 
-本目录提供这个已发布版本的 PoSDK 插件封装源码：原生 C++ 接口、Python 执行/SSH 传输（如适用）、配置及原始构建文件。Python 与 INI 逐字节取自已签名发布包；文件来源及 SHA-256 见 [source-manifest.json](source-manifest.json)。
+**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
 
-`../deps/` 保存依赖锁定、安装与来源说明；算法实现和模型按这些锁定记录从上游获取。PoSDK 主项目和其他插件的实现不在本目录中。
+### SuperPoint: Self-Supervised Interest Point Detection and Description
 
-## 构建
+- **Authors / 原作者：** Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich.
+- **Team / 团队：** Magic Leap.
+- **Publication / 论文：** 2018 · CVPR Workshops.
+- **Paper / 原文：** [SuperPoint: Self-Supervised Interest Point Detection and Description](https://openaccess.thecvf.com/content_cvpr_2018_workshops/w9/html/DeTone_SuperPoint_Self-Supervised_Interest_CVPR_2018_paper.html).
+- **Official project or implementation / 原作项目或实现：** [https://github.com/magicleap/SuperPointPretrainedNetwork](https://github.com/magicleap/SuperPointPretrainedNetwork).
 
-使用与该插件 ABI 匹配的 **PoSDK Plugin SDK**；当前发布目标为 macOS arm64。原始 CMake 文件沿用发布时的开发目录布局。构建助手只在指定 build 目录中组合本目录、相邻 deps 和许可证，并调整 SDK include 路径及共享头文件位置。
+### LightGlue: Local Feature Matching at Light Speed
 
-在插件目录执行：
+- **Authors / 原作者：** Philipp Lindenberger, Paul-Edouard Sarlin, Marc Pollefeys.
+- **Team / 团队：** ETH Zurich Computer Vision and Geometry Group.
+- **Publication / 论文：** 2023 · ICCV.
+- **Paper / 原文：** [LightGlue: Local Feature Matching at Light Speed](https://openaccess.thecvf.com/content/ICCV2023/html/Lindenberger_LightGlue_Local_Feature_Matching_at_Light_Speed_ICCV_2023_paper.html).
+- **Official project or implementation / 原作项目或实现：** [https://github.com/cvg/LightGlue](https://github.com/cvg/LightGlue).
 
-```bash
-python3 src/build.py --sdk-root "/path/to/PoSDK Plugin SDK" --build-dir "/tmp/method_superpoint_lightglue-build"
-```
+Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
+<!-- posdk:upstream-research:v1:end -->
 
-只检查配置可追加 `--configure-only`。依赖运行环境由上一级 `install.sh` 和 `deps/` 定义；模型文件不包含在源码快照中。现有市场安装入口仍为签名 `.pospkg`。
+Dataset-level frontend: data_images -> data_features + data_matches. Each image
+is extracted once; every pair reuses its stable feature indices. Coordinates
+are restored to the original image with the upstream pixel-center convention.
 
-## 许可与版本
+Choose execution_backend=local for the installer-managed isolated runtime.
+For execution_backend=ssh, configure ssh_target and ssh_python_executable from
+a matching remote installation. The local python_executable (or managed
+python_bin_folder) runs a standard-library SSH controller. ssh_runtime_folder
+may override the remote runtime; leave it empty for the managed sibling layout.
+Images and the signed worker are uploaded to an owner-only per-job directory.
+Input and output SHA-256 checks, bounded results, strict model/source identities,
+timeouts and per-job cleanup are required. SSH uses existing keys/agent and
+strict host-key checking; model or transport failures fail the run.
 
-保留[现有 LICENSE](../LICENSE)及[第三方声明](../THIRD_PARTY_NOTICES.md)。源码的可见性不额外授予这些文件未规定的许可；各上游作者与许可证保持原样。
+The initial signed package targets macOS arm64. Remote macOS arm64 is tested;
+Linux/CUDA support in the worker requires the exact declared Python/package
+versions and model identities and must be independently validated before use.
+auto/cpu use CPU. Explicit mps keeps the extractor on CPU and runs LightGlue
+on MPS; cuda explicitly requires CUDA for both stages.
 
-本次提供源码阅读和独立构建入口；已发布安装包、签名、版本与原有分发元数据保持其发布记录。
+Defaults: exhaustive pairs, 1280 keypoints, long edge 1024, seed 31. Run a
+same-resolution/same-pair-graph comparison before selecting a larger budget.
+
+## Wrapper source availability
+
+Recipients of the wrapper binary can obtain the corresponding MPL-2.0-covered
+wrapper source from the maintainer at qicaiCN@gmail.com. Dependency sources and weights
+are obtained separately under the licenses and pinned recipes in this package.
+
+## Research license
+
+SuperPoint has a restrictive noncommercial research license. Read
+THIRD_PARTY_NOTICES.md and deps/SUPERPOINT-LICENSE.txt before installation.
+The PoSDK wrapper license does not override the upstream license.
+
+## Source publication for 0.1.1
+
+Plugin-owned C++, Python, CMake and configuration source is published in `src/`.
+Pinned dependency locks, public source references, licenses and installer recipes
+are published in sibling `deps/`. The signed package binds this exact public file
+snapshot; no other plugin or PoSDK project history is included.
+
+For a standalone source build, copy the contents of `src/` to a separate build
+workspace and restore sibling `deps/` there before configuring with the matching
+PoSDK Plugin SDK. The signed binary installer uses its own immutable resources.
+SuperPoint remains subject to its noncommercial research license; publication
+does not change the dependency licenses.
