@@ -1,0 +1,16 @@
+{
+  "sources": {
+    "RoMaV2": {
+      "repo": "Parskatt/RoMaV2",
+      "revision": "95c9968145c8906b7b59383258e9f73b02853d89",
+      "raw_base": "https://raw.githubusercontent.com/Parskatt/RoMaV2/95c9968145c8906b7b59383258e9f73b02853d89/"
+    },
+    "DINOv3": {
+      "repo": "facebookresearch/dinov3",
+      "revision": "adc254450203739c8149213a7a69d8d905b4fcfa",
+      "raw_base": "https://raw.githubusercontent.com/facebookresearch/dinov3/adc254450203739c8149213a7a69d8d905b4fcfa/"
+    }
+  },
+  "model_url": "https://github.com/Parskatt/RoMaV2/releases/download/v2.0.1/romav2.0.1.pt",
+  "download_policy": "fetch only whitelisted per-file SHA256 sources"
+}

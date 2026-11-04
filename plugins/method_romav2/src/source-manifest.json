@@ -1,0 +1,108 @@
+{
+  "schema": "posdk.public-plugin-source.v1",
+  "plugin_id": "method_romav2",
+  "version": "0.1.0",
+  "release_tag": "posdk-method_romav2-v0.1.0",
+  "package_sha256": "9b273f94b8e5bb33ca3bdbfb3c3a1d55904472b2141375c1a8b049f1a6762041",
+  "scope": "Published plugin wrapper source only; upstream dependencies remain in ../deps/.",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 1956,
+      "sha256": "ae9ae23c823342af02a129e9e63eb7feb3a8d406be0c5d06b5c617aa10fa5faf",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1675,
+      "sha256": "ea5c183c5af86f4bb942cf5c1d21954b5c7f69fb7be8ee0585488442ba7f693f",
+      "origin": "source disclosure documentation"
+    },
+    {
+      "path": "build.py",
+      "bytes": 4353,
+      "sha256": "995d1179c11c4d93432482addd865cddb78f31c815002acd0ce7e65d4441973b",
+      "origin": "public source-layout build helper"
+    },
+    {
+      "path": "licenses/DINOv3-LICENSE.md",
+      "bytes": 7503,
+      "sha256": "25d122eb8f5b880fd23c736fb6ea8018ee45c12237e00b8a86d14c653904999e",
+      "origin": "signed package: plugins/methods/method_romav2/licenses/DINOv3-LICENSE.md"
+    },
+    {
+      "path": "licenses/RoMaV2-MIT.txt",
+      "bytes": 1070,
+      "sha256": "90aa528b008e22e4b20ae4b65edf960995de532ecb3552c0f72502a8870c181a",
+      "origin": "signed package: plugins/methods/method_romav2/licenses/RoMaV2-MIT.txt"
+    },
+    {
+      "path": "method_romav2.cpp",
+      "bytes": 10755,
+      "sha256": "12813731bcd425e44c39fec3b152f6f5eb0e60b8f1eed53c1ab7cc388f6c4244",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "method_romav2.hpp",
+      "bytes": 3041,
+      "sha256": "a975590a50b40ac09369d8e15da2184b207c04a639fdabb6eb1dbbb46ccfd70b",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "method_romav2.ini",
+      "bytes": 2450,
+      "sha256": "7ad6a2e8338f2f3902b6d87350e13e70c486ddd226627ba46271a1db3ffb9dce",
+      "origin": "signed package: configs/methods/method_romav2.ini"
+    },
+    {
+      "path": "plugin_runtime_path.hpp",
+      "bytes": 15100,
+      "sha256": "611ecf8dc93fc7190496034b0ceee16a0baeb85ee65acf21595dcedbd0b2ed40",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "romav2_aggregation.py",
+      "bytes": 9408,
+      "sha256": "93084404e4a1c2aece4cd42bad05b000a1bec93bffce77fa7cd8a9ebb70a5398",
+      "origin": "signed package: plugins/methods/romav2_aggregation.py"
+    },
+    {
+      "path": "romav2_worker.py",
+      "bytes": 21467,
+      "sha256": "0bb8ac050e709d7fa7c76425300ef3f0505ef72bce12e67346885361b7bff8ab",
+      "origin": "signed package: plugins/methods/romav2_worker.py"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "deps/client-smoke.py",
+      "sha256": "bee4f7796d0e212bac135e6156c5cc8d0ab4586b6d4c781f4de3ca3dc9a7ecd9",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/conda-osx-arm64.lock",
+      "sha256": "8abe60a9a7f58c2370cabc9b966253d80049c9c39a55d2613ee97df26271db38",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/provision-remote.py",
+      "sha256": "f8353aeb6f719afc16fdc4a2dea81365b214ed53af32e3f9d487c7911ee284b9",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/remote-requirements.lock",
+      "sha256": "ce0602ea1418a8f7f5bba2633772e8740f03c3ce2729a017fe2fa037609e1782",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/runtime-lock.json",
+      "sha256": "fdcd34b442d94d9d18eedfb2f2c7c8f2ff786e0c9d104b00d82d89144db66e22",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/source-downloads.json",
+      "sha256": "20e7506e13e3ffe7767daa32265efc6b5fb7157affa9e969d4794de382c56d95",
+      "origin": "signed package"
+    }
+  ]
+}

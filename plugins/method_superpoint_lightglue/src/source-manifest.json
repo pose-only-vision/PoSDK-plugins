@@ -1,0 +1,153 @@
+{
+  "schema": "posdk.public-plugin-source.v1",
+  "plugin_id": "method_superpoint_lightglue",
+  "version": "0.1.0",
+  "release_tag": "posdk-method_superpoint_lightglue-v0.1.0",
+  "package_sha256": "e61103b8fce3c16ff8a703375249797babbe8635e2ce553306a052b927e10fe4",
+  "scope": "Published plugin wrapper source only; upstream dependencies remain in ../deps/.",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 4780,
+      "sha256": "8d24687ca7d3a915808ac0c8ed996dbed0445e59f372efa42621813e812d8e2b",
+      "origin": "publisher release source archive"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1732,
+      "sha256": "0509afd1ccc334da20892f11f9bdb46ca611827e7c03d9e5bd1b1c91c4783f80",
+      "origin": "source disclosure documentation"
+    },
+    {
+      "path": "build.py",
+      "bytes": 4353,
+      "sha256": "995d1179c11c4d93432482addd865cddb78f31c815002acd0ce7e65d4441973b",
+      "origin": "public source-layout build helper"
+    },
+    {
+      "path": "licenses/LightGlue-Apache-2.0.txt",
+      "bytes": 11340,
+      "sha256": "0e6031ed3e62dc91dc8b1c8f240abd200b1083f60773362e64e339fe01d1bf18",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/LightGlue-Apache-2.0.txt"
+    },
+    {
+      "path": "licenses/SuperPoint-LICENSE.txt",
+      "bytes": 7014,
+      "sha256": "a79449584867091af048b81d4b8fa3a0e2cfa724ccf994a5873dea8c073d9266",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/SuperPoint-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/KORNIA-0.6.12-LICENSE.txt",
+      "bytes": 10173,
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/runtime/KORNIA-0.6.12-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/NUMPY-1.26.4-LICENSE.txt",
+      "bytes": 93961,
+      "sha256": "d9aa013a9509b655c3fd4b12e8d2ff222df83df39273ba1697a1a869d55b2129",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/runtime/NUMPY-1.26.4-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/NUMPY-MA-LICENSE.txt",
+      "bytes": 1594,
+      "sha256": "4a765ceefcddd40d6518f2f22f0fe2c6d532890be821d8bb1f2c21ebafed8817",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/runtime/NUMPY-MA-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/NUMPY-RANDOM-C-LICENSE.txt",
+      "bytes": 1018,
+      "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/runtime/NUMPY-RANDOM-C-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/NUMPY-RANDOM-LICENSE.md",
+      "bytes": 3511,
+      "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/runtime/NUMPY-RANDOM-LICENSE.md"
+    },
+    {
+      "path": "licenses/runtime/PILLOW-12.3.0-LICENSE.txt",
+      "bytes": 70307,
+      "sha256": "dda12a98c1979cf3d94df1cff45d27a4cb3f04a60c76f76902ac54cac03ec0ce",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/runtime/PILLOW-12.3.0-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/TORCH-2.2.2-LICENSE.txt",
+      "bytes": 351501,
+      "sha256": "a11fb738314b6617c6ede596e94f11fc9e260f50487c1c105739056c46e4ef92",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/runtime/TORCH-2.2.2-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/TORCH-2.2.2-NOTICE.txt",
+      "bytes": 23632,
+      "sha256": "c2cc7bf0caec7652c2b460a8a470bea1677f241e4ab8e431df34cf17f5a9fec0",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/runtime/TORCH-2.2.2-NOTICE.txt"
+    },
+    {
+      "path": "licenses/runtime/TORCHVISION-0.17.2-LICENSE.txt",
+      "bytes": 1517,
+      "sha256": "6502f676851cfe25f8af75531dfb32375b7325b73c37e7b43741fa422893e71d",
+      "origin": "signed package: plugins/methods/method_superpoint_lightglue/licenses/runtime/TORCHVISION-0.17.2-LICENSE.txt"
+    },
+    {
+      "path": "method_superpoint_lightglue.cpp",
+      "bytes": 48595,
+      "sha256": "463d0b25f5fa0ac8f7a795e0086dc3abb4956702f862ad17bd59f04200674807",
+      "origin": "publisher release source archive"
+    },
+    {
+      "path": "method_superpoint_lightglue.hpp",
+      "bytes": 7121,
+      "sha256": "909ba8a37b3c3d42037c7b9631c0894609d84c0ba8ba2d6f16537a0e64aa3be7",
+      "origin": "publisher release source archive"
+    },
+    {
+      "path": "method_superpoint_lightglue.ini",
+      "bytes": 7786,
+      "sha256": "440a99028927357c327e3bcfef95dd3711d1b25101ac3040a47a286855895d79",
+      "origin": "signed package: configs/methods/method_superpoint_lightglue.ini"
+    },
+    {
+      "path": "plugin_runtime_path.hpp",
+      "bytes": 15100,
+      "sha256": "611ecf8dc93fc7190496034b0ceee16a0baeb85ee65acf21595dcedbd0b2ed40",
+      "origin": "publisher release source archive"
+    },
+    {
+      "path": "superpoint_lightglue_ssh_agent.py",
+      "bytes": 11499,
+      "sha256": "f52ae0ac0141f355f38dc68565b922b042bd4dc3b1579ac9005da580a1a2e5ee",
+      "origin": "signed package: plugins/methods/superpoint_lightglue_ssh_agent.py"
+    },
+    {
+      "path": "superpoint_lightglue_ssh_runner.py",
+      "bytes": 12784,
+      "sha256": "a05c3b07383bc4153e1836848de05848f78be6d2f65349717c835f61b9e4dfd6",
+      "origin": "signed package: plugins/methods/superpoint_lightglue_ssh_runner.py"
+    },
+    {
+      "path": "superpoint_lightglue_worker.py",
+      "bytes": 24868,
+      "sha256": "e0522128a308cee5b8300b0f6286f837db2df849b3376f273523ab6660c03a21",
+      "origin": "signed package: plugins/methods/superpoint_lightglue_worker.py"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "deps/conda-osx-arm64.lock",
+      "sha256": "8abe60a9a7f58c2370cabc9b966253d80049c9c39a55d2613ee97df26271db38",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/install-smoke.py",
+      "sha256": "54ca3c47ef2dd4f534cb32f9a3e09f543755ccc83f087042266687f11789609d",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/requirements-osx-arm64.lock",
+      "sha256": "69b43d994479be44259d23d6dbb0ee413b132c2dec4ac10c8967d46bb2b62385",
+      "origin": "signed package"
+    }
+  ]
+}

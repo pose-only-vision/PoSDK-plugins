@@ -1,0 +1,59 @@
+{
+  "schema": "posdk.public-plugin-source.v1",
+  "plugin_id": "method_rotation_averaging",
+  "version": "0.1.1",
+  "release_tag": "posdk-method_rotation_averaging-v0.1.1",
+  "package_sha256": "2f0b2966c7e141bbf6073100ceb83a83eabd3026af39cbe293e9c6447819eeb4",
+  "scope": "Published plugin wrapper source only; upstream dependencies remain in ../deps/.",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 3667,
+      "sha256": "a087f7f178affcf7ad2cd319cfb9b81673ac5e401d58f95287b9d8e0cad69702",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1722,
+      "sha256": "660f31ffbc129a202f74423ddc9e826225debb5ba196e92a4284fd168ee593f6",
+      "origin": "source disclosure documentation"
+    },
+    {
+      "path": "build.py",
+      "bytes": 4353,
+      "sha256": "995d1179c11c4d93432482addd865cddb78f31c815002acd0ce7e65d4441973b",
+      "origin": "public source-layout build helper"
+    },
+    {
+      "path": "method_rotation_averaging.cpp",
+      "bytes": 77467,
+      "sha256": "2130888347bf08d9b86e8d69ca461e6586ae17c91e092aac9c55be495a77fe8f",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "method_rotation_averaging.hpp",
+      "bytes": 7217,
+      "sha256": "92060336d1bde56af3337fcfbd624c4c93e4cbded0b956ef9d13edaadc2dd106",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "method_rotation_averaging.ini",
+      "bytes": 2227,
+      "sha256": "0cb715bf12f9192c7ebf2dfb2c41d5098dee26258d71b98f8689a6d9b60431fc",
+      "origin": "signed package: configs/methods/method_rotation_averaging.ini"
+    },
+    {
+      "path": "plugin_runtime_path.hpp",
+      "bytes": 15100,
+      "sha256": "611ecf8dc93fc7190496034b0ceee16a0baeb85ee65acf21595dcedbd0b2ed40",
+      "origin": "shared published-plugin runtime helper"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "deps/GraphOptim-source.tar.gz",
+      "sha256": "e3a3bd61123091a6ebb254c5517fd3b83c0834b74c4ea87cee316b8ff25c5251",
+      "origin": "signed package"
+    }
+  ]
+}

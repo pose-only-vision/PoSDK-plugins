@@ -1,0 +1,37 @@
+{
+  "schema": "posdk.loma-runtime.v1",
+  "models": [
+    {
+      "role": "detector",
+      "url": "https://github.com/davnords/storage/releases/download/loma/loma_detector.onnx",
+      "name": "loma_detector.onnx",
+      "sha256": "b6af99c5e730034ac9b675d1ebe05d0679af4569a3c26f10a6a50f91e02dc512",
+      "size": 26187830
+    },
+    {
+      "role": "descriptor",
+      "url": "https://github.com/davnords/storage/releases/download/loma/loma_descriptor_dedode_g.onnx",
+      "name": "loma_descriptor_dedode_g.onnx",
+      "sha256": "5a7b9eaf7425d4513c5d7feae86080bae7ed3aceae7fb1b9f059d0752e2ad564",
+      "size": 1294905349
+    },
+    {
+      "role": "matcher",
+      "url": "https://github.com/davnords/storage/releases/download/loma/loma_matcher_B.onnx",
+      "name": "loma_matcher_B.onnx",
+      "sha256": "ba5a2773b29cace19f1240e14e5a080cca3eaf9f69a7adb829a1d470557001c7",
+      "size": 48361254
+    }
+  ],
+  "runtime": {
+    "python": "3.11.11",
+    "numpy": "1.26.4",
+    "pillow": "12.3.0",
+    "onnxruntime": "1.23.2",
+    "pycolmap": "4.2.1"
+  },
+  "adapter_reference": {
+    "repository": "https://github.com/colmap/colmap",
+    "revision": "bd1fcf654d2dd8fefa1466999c190a246f83f4b9"
+  }
+}

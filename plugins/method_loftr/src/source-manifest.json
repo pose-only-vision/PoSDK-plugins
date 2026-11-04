@@ -1,0 +1,183 @@
+{
+  "schema": "posdk.public-plugin-source.v1",
+  "plugin_id": "method_loftr",
+  "version": "0.3.1",
+  "release_tag": "posdk-method_loftr-v0.3.1",
+  "package_sha256": "465a04d73d6dab5c636322d2bc45e9bf040da7b340eee2665815ad8361d4f753",
+  "scope": "Published plugin wrapper source only; upstream dependencies remain in ../deps/.",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 3330,
+      "sha256": "e86df7e4db954bf272ff7858dac0f4600cd575b7967471d50324797820a8d585",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "LoFTRFeatureIndex.hpp",
+      "bytes": 2683,
+      "sha256": "1f647d8cd05b855ca4344b62a92d85fd674dfdaab8a35766773cb8f7449845ae",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "LoFTRMatcher.cpp",
+      "bytes": 15713,
+      "sha256": "ad3979533eb33095507f6d71d8645e353b46207afe8296311fe7f08bf1d7fb87",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "LoFTRMatcher.hpp",
+      "bytes": 2829,
+      "sha256": "961ef04d1428b1734b7cc5b0e5f65981bbe9a9db453d12990097b652714793ec",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "LoFTRParams.cpp",
+      "bytes": 11259,
+      "sha256": "f4e7fd6b19f503fa59050304a53ac2402e3102004ad1a49004aa99d9dd80e17c",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "LoFTRParams.hpp",
+      "bytes": 3692,
+      "sha256": "c7deaac3eb152569ed25805246f78c682a51f7db4a8af63da119100abc44fc98",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1670,
+      "sha256": "8bf772df33fdc279df7a0a4929eeebc0374d3e3ad8532737563a38a515175f0c",
+      "origin": "source disclosure documentation"
+    },
+    {
+      "path": "build.py",
+      "bytes": 4353,
+      "sha256": "995d1179c11c4d93432482addd865cddb78f31c815002acd0ce7e65d4441973b",
+      "origin": "public source-layout build helper"
+    },
+    {
+      "path": "licenses/runtime/KORNIA-0.7.4-LICENSE.txt",
+      "bytes": 10173,
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "origin": "signed package: plugins/methods/method_loftr/licenses/runtime/KORNIA-0.7.4-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/NUMPY-1.26.4-LICENSE.txt",
+      "bytes": 93961,
+      "sha256": "d9aa013a9509b655c3fd4b12e8d2ff222df83df39273ba1697a1a869d55b2129",
+      "origin": "signed package: plugins/methods/method_loftr/licenses/runtime/NUMPY-1.26.4-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/OPENCV-PYTHON-4.10.0.84-LICENSE-3RD-PARTY.txt",
+      "bytes": 152360,
+      "sha256": "4fc3c113d53e95da0f3c433655a67067b7310e53af31eb6d280e94cc6927a363",
+      "origin": "signed package: plugins/methods/method_loftr/licenses/runtime/OPENCV-PYTHON-4.10.0.84-LICENSE-3RD-PARTY.txt"
+    },
+    {
+      "path": "licenses/runtime/OPENCV-PYTHON-4.10.0.84-LICENSE.txt",
+      "bytes": 1070,
+      "sha256": "09d719058e782ac7bc71ba21c944e1136cde2bb957c0e888121f0218d6b5f02c",
+      "origin": "signed package: plugins/methods/method_loftr/licenses/runtime/OPENCV-PYTHON-4.10.0.84-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/TORCH-2.2.2-LICENSE.txt",
+      "bytes": 351501,
+      "sha256": "a11fb738314b6617c6ede596e94f11fc9e260f50487c1c105739056c46e4ef92",
+      "origin": "signed package: plugins/methods/method_loftr/licenses/runtime/TORCH-2.2.2-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/TORCH-2.2.2-NOTICE.txt",
+      "bytes": 23632,
+      "sha256": "c2cc7bf0caec7652c2b460a8a470bea1677f241e4ab8e431df34cf17f5a9fec0",
+      "origin": "signed package: plugins/methods/method_loftr/licenses/runtime/TORCH-2.2.2-NOTICE.txt"
+    },
+    {
+      "path": "licenses/runtime/TORCHVISION-0.17.2-LICENSE.txt",
+      "bytes": 1517,
+      "sha256": "6502f676851cfe25f8af75531dfb32375b7325b73c37e7b43741fa422893e71d",
+      "origin": "signed package: plugins/methods/method_loftr/licenses/runtime/TORCHVISION-0.17.2-LICENSE.txt"
+    },
+    {
+      "path": "loftr_aggregation.py",
+      "bytes": 9408,
+      "sha256": "93084404e4a1c2aece4cd42bad05b000a1bec93bffce77fa7cd8a9ebb70a5398",
+      "origin": "signed package: plugins/methods/loftr_aggregation.py"
+    },
+    {
+      "path": "loftr_batch_worker.py",
+      "bytes": 13823,
+      "sha256": "6e4acc50c9a665212c39ff8c1c671ccc2d7c637f3f07ca8ada75b58d4ca64cd9",
+      "origin": "signed package: plugins/methods/loftr_batch_worker.py"
+    },
+    {
+      "path": "loftr_fast_mode.cpp",
+      "bytes": 7363,
+      "sha256": "5ac31760efeb6599b62d97bccdfa0509c044962ef66f7cae8d0f1abbacb22b11",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "loftr_matcher.py",
+      "bytes": 6462,
+      "sha256": "67773d4985118094441c287bba5e0d76397e7f801687c09f9759e5c9cb32c2de",
+      "origin": "signed package: plugins/methods/loftr_matcher.py"
+    },
+    {
+      "path": "loftr_pipeline.cpp",
+      "bytes": 3106,
+      "sha256": "bf3c5e5713032bca5497cfae43203b7aeaf59c8f158f89ac0b47dc11fc3e84b6",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "loftr_pipeline.hpp",
+      "bytes": 6812,
+      "sha256": "1c23fc8df24298fe2d6243ca9402a5c136df230d6c92d51737ea869f09a447ee",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "loftr_rotation.py",
+      "bytes": 6294,
+      "sha256": "7ce353355967283ed25cdc5ee546bcf3356895790dbc2231bd6a8247e4d016ee",
+      "origin": "signed package: plugins/methods/loftr_rotation.py"
+    },
+    {
+      "path": "loftr_ssh_agent.py",
+      "bytes": 13816,
+      "sha256": "894f3e0e0a0fe47fac1b8d8438e00a094395e8d7f1f1654f10f0969a0dfdb9bd",
+      "origin": "signed package: plugins/methods/loftr_ssh_agent.py"
+    },
+    {
+      "path": "loftr_ssh_runner.py",
+      "bytes": 15060,
+      "sha256": "e5ce6c2954d6e8769977087154d53e741ce56c49889bec4bb30e33473564b92d",
+      "origin": "signed package: plugins/methods/loftr_ssh_runner.py"
+    },
+    {
+      "path": "method_loftr.ini",
+      "bytes": 11739,
+      "sha256": "28dcabd08408451e979cf29af4d29475a3f6891cc9e23773025e7a2934583084",
+      "origin": "signed package: configs/methods/method_loftr.ini"
+    },
+    {
+      "path": "plugin_runtime_path.hpp",
+      "bytes": 15100,
+      "sha256": "611ecf8dc93fc7190496034b0ceee16a0baeb85ee65acf21595dcedbd0b2ed40",
+      "origin": "shared published-plugin runtime helper"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "deps/conda-osx-arm64.lock",
+      "sha256": "8abe60a9a7f58c2370cabc9b966253d80049c9c39a55d2613ee97df26271db38",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/install-smoke.py",
+      "sha256": "5de90eebd8b0201940aff6f6f0b0588e7b86f07f6b76d68c52501ee705cab2fc",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/requirements-osx-arm64.lock",
+      "sha256": "18e398adf227965983f3d1aeaeb3e904c0ba15a6a6ac28946eac5f4b2c111892",
+      "origin": "signed package"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schema": "posdk.public-plugin-source.v1",
+  "plugin_id": "method_aliked_lightglue",
+  "version": "0.1.2",
+  "release_tag": "posdk-method_aliked_lightglue-v0.1.2",
+  "package_sha256": "ce2d400816fcacf55249f6c0b23ca6af8bf4d9f15a353fb5d9290bfe68c79612",
+  "scope": "Published plugin wrapper source only; upstream dependencies remain in ../deps/.",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 4536,
+      "sha256": "44be90649bc3b83dcaca610aaf04cf478adb6eb51e23b812f660511dbfaeaa51",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1716,
+      "sha256": "39d177a05a635a950ce6d403d98a95e087b8db0cd825081dbaafe0abf59aa01e",
+      "origin": "source disclosure documentation"
+    },
+    {
+      "path": "aliked_lightglue_worker.py",
+      "bytes": 24263,
+      "sha256": "e2858f7071cede3e3f55115a4d1a90aed63356abf36bec35930f99c6c52066ef",
+      "origin": "signed package: plugins/methods/aliked_lightglue_worker.py"
+    },
+    {
+      "path": "build.py",
+      "bytes": 4353,
+      "sha256": "995d1179c11c4d93432482addd865cddb78f31c815002acd0ce7e65d4441973b",
+      "origin": "public source-layout build helper"
+    },
+    {
+      "path": "licenses/ALIKED-BSD-3-Clause.txt",
+      "bytes": 1522,
+      "sha256": "d586e109337e057556cc9f1e6893c8c6920954ae8e55cedb1cfdadfd46ad4226",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/ALIKED-BSD-3-Clause.txt"
+    },
+    {
+      "path": "licenses/LightGlue-Apache-2.0.txt",
+      "bytes": 11340,
+      "sha256": "0e6031ed3e62dc91dc8b1c8f240abd200b1083f60773362e64e339fe01d1bf18",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/LightGlue-Apache-2.0.txt"
+    },
+    {
+      "path": "licenses/runtime/KORNIA-0.6.12-LICENSE.txt",
+      "bytes": 10173,
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/runtime/KORNIA-0.6.12-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/NUMPY-1.26.4-LICENSE.txt",
+      "bytes": 93961,
+      "sha256": "d9aa013a9509b655c3fd4b12e8d2ff222df83df39273ba1697a1a869d55b2129",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/runtime/NUMPY-1.26.4-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/NUMPY-MA-LICENSE.txt",
+      "bytes": 1594,
+      "sha256": "4a765ceefcddd40d6518f2f22f0fe2c6d532890be821d8bb1f2c21ebafed8817",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/runtime/NUMPY-MA-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/NUMPY-RANDOM-C-LICENSE.txt",
+      "bytes": 1018,
+      "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/runtime/NUMPY-RANDOM-C-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/NUMPY-RANDOM-LICENSE.md",
+      "bytes": 3511,
+      "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/runtime/NUMPY-RANDOM-LICENSE.md"
+    },
+    {
+      "path": "licenses/runtime/PILLOW-12.3.0-LICENSE.txt",
+      "bytes": 70307,
+      "sha256": "dda12a98c1979cf3d94df1cff45d27a4cb3f04a60c76f76902ac54cac03ec0ce",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/runtime/PILLOW-12.3.0-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/TORCH-2.2.2-LICENSE.txt",
+      "bytes": 351501,
+      "sha256": "a11fb738314b6617c6ede596e94f11fc9e260f50487c1c105739056c46e4ef92",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/runtime/TORCH-2.2.2-LICENSE.txt"
+    },
+    {
+      "path": "licenses/runtime/TORCH-2.2.2-NOTICE.txt",
+      "bytes": 23632,
+      "sha256": "c2cc7bf0caec7652c2b460a8a470bea1677f241e4ab8e431df34cf17f5a9fec0",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/runtime/TORCH-2.2.2-NOTICE.txt"
+    },
+    {
+      "path": "licenses/runtime/TORCHVISION-0.17.2-LICENSE.txt",
+      "bytes": 1517,
+      "sha256": "6502f676851cfe25f8af75531dfb32375b7325b73c37e7b43741fa422893e71d",
+      "origin": "signed package: plugins/methods/method_aliked_lightglue/licenses/runtime/TORCHVISION-0.17.2-LICENSE.txt"
+    },
+    {
+      "path": "method_aliked_lightglue.cpp",
+      "bytes": 45476,
+      "sha256": "cea03f1af89336652cbef31e26161b551513515ae8781ad9d478a2ab6a9c0c6f",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "method_aliked_lightglue.hpp",
+      "bytes": 10665,
+      "sha256": "d2a7f4aba502f4d075e88a939edb52c6ba2e33f4d5bf723549dd889ee458c5f9",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "method_aliked_lightglue.ini",
+      "bytes": 6415,
+      "sha256": "e3a53ba9335b2c55f5564b5bed41aaae4583aa914548f9f76aa2c5d3f1fc220d",
+      "origin": "signed package: configs/methods/method_aliked_lightglue.ini"
+    },
+    {
+      "path": "plugin_runtime_path.hpp",
+      "bytes": 15100,
+      "sha256": "611ecf8dc93fc7190496034b0ceee16a0baeb85ee65acf21595dcedbd0b2ed40",
+      "origin": "shared published-plugin runtime helper"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "deps/conda-osx-arm64.lock",
+      "sha256": "8abe60a9a7f58c2370cabc9b966253d80049c9c39a55d2613ee97df26271db38",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/install-smoke.py",
+      "sha256": "4567303c14af0b86ccc711ff254b58b372321519e82e706e2da7e9360dc24d67",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/requirements-osx-arm64.lock",
+      "sha256": "69b43d994479be44259d23d6dbb0ee413b132c2dec4ac10c8967d46bb2b62385",
+      "origin": "signed package"
+    }
+  ]
+}

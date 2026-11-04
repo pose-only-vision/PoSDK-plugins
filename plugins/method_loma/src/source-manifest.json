@@ -1,0 +1,109 @@
+{
+  "schema": "posdk.public-plugin-source.v1",
+  "plugin_id": "method_loma",
+  "version": "0.1.0",
+  "release_tag": "posdk-method_loma-v0.1.0",
+  "package_sha256": "6eb9fb2056db6153394c86604593df14caf51494a69ad7b8cb6ae20a97f2bba1",
+  "scope": "Published plugin wrapper source only; upstream dependencies remain in ../deps/.",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 2060,
+      "sha256": "4b244b61eb8df5d2ad07fc977eac8e182eb9b6700c1f09c03f23dd8f36703cb5",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1668,
+      "sha256": "c03b54dcdeb31cc031ea17ac5176b007d8e7de3a6f4f68c166cd3c08d58c01c0",
+      "origin": "source disclosure documentation"
+    },
+    {
+      "path": "build.py",
+      "bytes": 4353,
+      "sha256": "995d1179c11c4d93432482addd865cddb78f31c815002acd0ce7e65d4441973b",
+      "origin": "public source-layout build helper"
+    },
+    {
+      "path": "licenses/COLMAP-BSD-3-Clause.txt",
+      "bytes": 1909,
+      "sha256": "ab30dabb4f0a6731f980108f57aa160cc8f5cebae6984e01a5d109df99669233",
+      "origin": "signed package: plugins/methods/method_loma/licenses/COLMAP-BSD-3-Clause.txt"
+    },
+    {
+      "path": "licenses/LightGlue-Apache-2.0.txt",
+      "bytes": 11340,
+      "sha256": "0e6031ed3e62dc91dc8b1c8f240abd200b1083f60773362e64e339fe01d1bf18",
+      "origin": "signed package: plugins/methods/method_loma/licenses/LightGlue-Apache-2.0.txt"
+    },
+    {
+      "path": "licenses/LoMa-MIT.txt",
+      "bytes": 1070,
+      "sha256": "42e102d0932c144492f6a9bbd69a8ad26209478b66be28f48b04dc3dfdb6e8f1",
+      "origin": "signed package: plugins/methods/method_loma/licenses/LoMa-MIT.txt"
+    },
+    {
+      "path": "licenses/ONNXRuntime-MIT.txt",
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "origin": "signed package: plugins/methods/method_loma/licenses/ONNXRuntime-MIT.txt"
+    },
+    {
+      "path": "loma_worker.py",
+      "bytes": 23879,
+      "sha256": "9b09f41d2af08e04ee08a281b04d38537d086d29158dbd9a5d8e6c1b726693fa",
+      "origin": "signed package: plugins/methods/loma_worker.py"
+    },
+    {
+      "path": "method_loma.cpp",
+      "bytes": 10710,
+      "sha256": "fdb7fc2a35c90c438a465f3d098b47b0ff13ff27ca8c3c0421d4dc0887207d91",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "method_loma.hpp",
+      "bytes": 2582,
+      "sha256": "5407eb354a733b3bf1f9da67e18800de1900ce770b045f3c67bbbb49634221fc",
+      "origin": "publisher version-matched source snapshot"
+    },
+    {
+      "path": "method_loma.ini",
+      "bytes": 2327,
+      "sha256": "c5a15cdb7c27e66b42b940a0952138aaa5390c551b3a1e659ea1c3c959e4c226",
+      "origin": "signed package: configs/methods/method_loma.ini"
+    },
+    {
+      "path": "plugin_runtime_path.hpp",
+      "bytes": 15100,
+      "sha256": "611ecf8dc93fc7190496034b0ceee16a0baeb85ee65acf21595dcedbd0b2ed40",
+      "origin": "publisher version-matched source snapshot"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "deps/client-smoke.py",
+      "sha256": "bee4f7796d0e212bac135e6156c5cc8d0ab4586b6d4c781f4de3ca3dc9a7ecd9",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/conda-osx-arm64.lock",
+      "sha256": "8abe60a9a7f58c2370cabc9b966253d80049c9c39a55d2613ee97df26271db38",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/provision-remote.py",
+      "sha256": "f8353aeb6f719afc16fdc4a2dea81365b214ed53af32e3f9d487c7911ee284b9",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/remote-requirements.lock",
+      "sha256": "9396d5fde23a61bdaf9c68db016dcbad3baf056c1e765c8a7bccd354749c627c",
+      "origin": "signed package"
+    },
+    {
+      "path": "deps/runtime-lock.json",
+      "sha256": "dd6718eb026502ad6c610af366fe85fd943ef60bd3c6e5cc112b7ef4f329704b",
+      "origin": "signed package"
+    }
+  ]
+}

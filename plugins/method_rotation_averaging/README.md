@@ -1,5 +1,17 @@
 # Rotation Averaging for PoMVG
 
+<!-- posdk:published-source:start -->
+## 插件源码 / Plugin source
+
+当前已发布版本 **0.1.1** 的插件源码在 [`src/`](src/)；外部依赖锁定与安装说明在 [`deps/`](deps/)。
+
+- [阅读 C++、Python 和配置源码](src/)
+- [构建说明](src/README.md)
+- [源码文件与 SHA-256 清单](src/source-manifest.json)
+
+<!-- posdk:published-source:end -->
+
+
 <!-- posdk:upstream-research:v1:start -->
 ## Original research and authors / 原论文与原作团队
 
