@@ -1,46 +1,50 @@
 # Rotation Averaging for PoMVG
 
+English | [简体中文](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_rotation_averaging/README_zh.md)
+
+Published version: **0.1.1** · [Signed release](https://github.com/pose-only-vision/PoSDK-plugins/releases/tag/posdk-method_rotation_averaging-v0.1.1)
+
 <!-- posdk:published-source:start -->
-## 插件源码 / Plugin source
+## Plugin source
 
-当前已发布版本 **0.1.1** 的插件源码在 [`src/`](src/)；外部依赖锁定与安装说明在 [`deps/`](deps/)。
+The plugin source for published version **0.1.1** is in [`src/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_rotation_averaging/src/). Dependency locks and installation instructions are in [`deps/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_rotation_averaging/deps/).
 
-- [阅读 C++、Python 和配置源码](src/)
-- [构建说明](src/README.md)
-- [源码文件与 SHA-256 清单](src/source-manifest.json)
+- [Browse C++, Python and configuration source](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_rotation_averaging/src/)
+- [Build instructions](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_rotation_averaging/src/README.md)
+- [Source file and SHA-256 inventory](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_rotation_averaging/src/source-manifest.json)
 
 <!-- posdk:published-source:end -->
 
 
 <!-- posdk:upstream-research:v1:start -->
-## Original research and authors / 原论文与原作团队
+## Original research and authors
 
-**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+**PoSDK integration:** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
 
 ### Efficient and Robust Large-Scale Rotation Averaging
 
-- **Authors / 原作者：** Avishek Chatterjee, Venu Madhav Govindu.
-- **Team / 团队：** Indian Institute of Science, Bengaluru.
-- **Publication / 论文：** 2013 · ICCV.
-- **Paper / 原文：** [Efficient and Robust Large-Scale Rotation Averaging](https://openaccess.thecvf.com/content_iccv_2013/html/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.html).
-- **Official project or implementation / 原作项目或实现：** [https://ee.iisc.ac.in/cvlab/research/rotaveraging/](https://ee.iisc.ac.in/cvlab/research/rotaveraging/).
+- **Authors:** Avishek Chatterjee, Venu Madhav Govindu.
+- **Team:** Indian Institute of Science, Bengaluru.
+- **Publication:** 2013 · ICCV.
+- **Paper:** [Efficient and Robust Large-Scale Rotation Averaging](https://openaccess.thecvf.com/content_iccv_2013/html/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.html).
+- **Official project or implementation:** [https://ee.iisc.ac.in/cvlab/research/rotaveraging/](https://ee.iisc.ac.in/cvlab/research/rotaveraging/).
 
 ### Hybrid Rotation Averaging: A Fast and Robust Rotation Averaging Approach
 
-- **Authors / 原作者：** Yu Chen, Ji Zhao, Laurent Kneip.
-- **Team / 团队：** GraphOptim original author team.
-- **Publication / 论文：** 2021 · CVPR.
-- **Paper / 原文：** [Hybrid Rotation Averaging: A Fast and Robust Rotation Averaging Approach](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Hybrid_Rotation_Averaging_A_Fast_and_Robust_Rotation_Averaging_Approach_CVPR_2021_paper.html).
-- **Official project or implementation / 原作项目或实现：** [https://github.com/AIBluefisher/GraphOptim](https://github.com/AIBluefisher/GraphOptim).
+- **Authors:** Yu Chen, Ji Zhao, Laurent Kneip.
+- **Team:** GraphOptim original author team.
+- **Publication:** 2021 · CVPR.
+- **Paper:** [Hybrid Rotation Averaging: A Fast and Robust Rotation Averaging Approach](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Hybrid_Rotation_Averaging_A_Fast_and_Robust_Rotation_Averaging_Approach_CVPR_2021_paper.html).
+- **Official project or implementation:** [https://github.com/AIBluefisher/GraphOptim](https://github.com/AIBluefisher/GraphOptim).
 
 The Chatterjee and GraphOptim backends are distinct implementations. The host supplies the Chatterjee child plugin; GraphOptim is installed from its pinned upstream source.
 
 Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
 <!-- posdk:upstream-research:v1:end -->
 
-**Plugin integration author / 插件集成作者:** qi Cai
+**Plugin integration author:** qi Cai
 
-**Contact / 联系邮箱:** <qicaiCN@gmail.com>
+**Contact:** <qicaiCN@gmail.com>
 
 `method_rotation_averaging` is a PoMVG method plugin for global rotation
 averaging. The signed Marketplace package provides two selectable backends:
@@ -80,7 +84,7 @@ This release uses `closed_plugin_open_dependencies`:
 - the PoMVG plugin implementation is distributed as a signed binary;
 - GraphOptim remains open source under BSD-3-Clause;
 - the exact GraphOptim revision, source-archive SHA-256, build recipe, and
-  prerequisites are documented in [`deps/README.md`](deps/README.md);
+  prerequisites are documented in [`deps/README.md`](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_rotation_averaging/deps/README.md);
 - the public repository contains review metadata and scripts, while executable
   payloads are published only as signed GitHub Release `.pospkg` assets.
 
@@ -107,7 +111,7 @@ directory URL
 and an optional Logo URL. PoSDK.net reads this README and all signed plugin
 metadata automatically.
 
-## Third-party dependencies / 第三方依赖
+## Third-party dependencies
 
 | Component | Version / provenance | Role | License / notice |
 |---|---|---|---|
@@ -115,14 +119,16 @@ metadata automatically.
 | Chatterjee rotation averaging | Host-provided `method_rotation_averaging_chatterjee` | Alternate built-in backend | Avishek Chatterjee and Venu Madhav Govindu; implementation notices supplied by the host |
 | CMake, Eigen, Ceres, glog, gflags, SuiteSparse, libomp, TBB, METIS | Actual Homebrew versions recorded in the installer's build contract | GraphOptim compilation and linked libraries | Each upstream distribution retains its component license files |
 
-插件集成作者为 qi Cai；GraphOptim 与 Chatterjee 方法保留原始作者署名。
-GraphOptim 源码归档固定提交和 SHA-256，构建依赖的实际版本另记入本机构建契约。
-详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 与
-[deps/README.md](deps/README.md) 中的来源、用途、版本和许可证位置。
+qi Cai authors the plugin integration; GraphOptim and Chatterjee retain
+their original attribution. The GraphOptim source archive is pinned by
+commit and SHA-256; actual build dependency versions are recorded in the
+local build contract. See [THIRD_PARTY_NOTICES.md](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_rotation_averaging/THIRD_PARTY_NOTICES.md)
+and [deps/README.md](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_rotation_averaging/deps/README.md) for sources, roles, versions and
+license locations.
 
 ## License
 
 The PoMVG plugin binary is distributed under `LicenseRef-PoSDK-Proprietary`.
 GraphOptim and all other third-party components retain their respective
-licenses. See [LICENSE.md](LICENSE.md) and
-[`deps/README.md`](deps/README.md).
+licenses. See [LICENSE.md](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_rotation_averaging/LICENSE.md) and
+[`deps/README.md`](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_rotation_averaging/deps/README.md).

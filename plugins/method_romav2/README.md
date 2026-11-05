@@ -1,29 +1,33 @@
 # RoMa v2 for PoSDK
 
+English | [简体中文](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_romav2/README_zh.md)
+
+Published version: **0.1.0** · [Signed release](https://github.com/pose-only-vision/PoSDK-plugins/releases/tag/posdk-method_romav2-v0.1.0)
+
 <!-- posdk:published-source:start -->
-## 插件源码 / Plugin source
+## Plugin source
 
-当前已发布版本 **0.1.0** 的插件源码在 [`src/`](src/)；外部依赖锁定与安装说明在 [`deps/`](deps/)。
+The plugin source for published version **0.1.0** is in [`src/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_romav2/src/). Dependency locks and installation instructions are in [`deps/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_romav2/deps/).
 
-- [阅读 C++、Python 和配置源码](src/)
-- [构建说明](src/README.md)
-- [源码文件与 SHA-256 清单](src/source-manifest.json)
+- [Browse C++, Python and configuration source](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_romav2/src/)
+- [Build instructions](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_romav2/src/README.md)
+- [Source file and SHA-256 inventory](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_romav2/src/source-manifest.json)
 
 <!-- posdk:published-source:end -->
 
 
 <!-- posdk:upstream-research:v1:start -->
-## Original research and authors / 原论文与原作团队
+## Original research and authors
 
-**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+**PoSDK integration:** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
 
 ### RoMa v2: Harder Better Faster Denser Feature Matching
 
-- **Authors / 原作者：** Johan Edstedt, David Nordström, Yushan Zhang, Georg Bökman, Jonathan Astermark, Viktor Larsson, Anders Heyden, Fredrik Kahl, Mårten Wadenbäck, Michael Felsberg.
-- **Team / 团队：** Linköping University; Chalmers University of Technology; University of Amsterdam; Lund University.
-- **Publication / 论文：** 2025 · arXiv preprint.
-- **Paper / 原文：** [RoMa v2: Harder Better Faster Denser Feature Matching](https://arxiv.org/abs/2511.15706).
-- **Official project or implementation / 原作项目或实现：** [https://github.com/Parskatt/RoMaV2](https://github.com/Parskatt/RoMaV2).
+- **Authors:** Johan Edstedt, David Nordström, Yushan Zhang, Georg Bökman, Jonathan Astermark, Viktor Larsson, Anders Heyden, Fredrik Kahl, Mårten Wadenbäck, Michael Felsberg.
+- **Team:** Linköping University; Chalmers University of Technology; University of Amsterdam; Lund University.
+- **Publication:** 2025 · arXiv preprint.
+- **Paper:** [RoMa v2: Harder Better Faster Denser Feature Matching](https://arxiv.org/abs/2511.15706).
+- **Official project or implementation:** [https://github.com/Parskatt/RoMaV2](https://github.com/Parskatt/RoMaV2).
 
 The matcher is the original pretrained **RoMa v2 v2.0.1**. DINOv3 is a separate Meta foundation-model dependency with its own license. MV-RoMa and learned PoGT adapters are not part of this plugin.
 

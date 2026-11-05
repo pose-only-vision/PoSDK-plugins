@@ -1,36 +1,40 @@
 # LoFTR for PoMVG
 
+English | [简体中文](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_loftr/README_zh.md)
+
+Published version: **0.3.1** · [Signed release](https://github.com/pose-only-vision/PoSDK-plugins/releases/tag/posdk-method_loftr-v0.3.1)
+
 <!-- posdk:published-source:start -->
-## 插件源码 / Plugin source
+## Plugin source
 
-当前已发布版本 **0.3.1** 的插件源码在 [`src/`](src/)；外部依赖锁定与安装说明在 [`deps/`](deps/)。
+The plugin source for published version **0.3.1** is in [`src/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_loftr/src/). Dependency locks and installation instructions are in [`deps/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_loftr/deps/).
 
-- [阅读 C++、Python 和配置源码](src/)
-- [构建说明](src/README.md)
-- [源码文件与 SHA-256 清单](src/source-manifest.json)
+- [Browse C++, Python and configuration source](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_loftr/src/)
+- [Build instructions](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_loftr/src/README.md)
+- [Source file and SHA-256 inventory](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_loftr/src/source-manifest.json)
 
 <!-- posdk:published-source:end -->
 
 
 <!-- posdk:upstream-research:v1:start -->
-## Original research and authors / 原论文与原作团队
+## Original research and authors
 
-**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+**PoSDK integration:** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
 
 ### LoFTR: Detector-Free Local Feature Matching with Transformers
 
-- **Authors / 原作者：** Jiaming Sun, Zehong Shen, Yuang Wang, Hujun Bao, Xiaowei Zhou.
-- **Team / 团队：** Zhejiang University CAD & CG; SenseTime Research.
-- **Publication / 论文：** 2021 · CVPR.
-- **Paper / 原文：** [LoFTR: Detector-Free Local Feature Matching with Transformers](https://zju3dv.github.io/loftr/).
-- **Official project or implementation / 原作项目或实现：** [https://github.com/zju3dv/LoFTR](https://github.com/zju3dv/LoFTR).
+- **Authors:** Jiaming Sun, Zehong Shen, Yuang Wang, Hujun Bao, Xiaowei Zhou.
+- **Team:** Zhejiang University CAD & CG; SenseTime Research.
+- **Publication:** 2021 · CVPR.
+- **Paper:** [LoFTR: Detector-Free Local Feature Matching with Transformers](https://zju3dv.github.io/loftr/).
+- **Official project or implementation:** [https://github.com/zju3dv/LoFTR](https://github.com/zju3dv/LoFTR).
 
 Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
 <!-- posdk:upstream-research:v1:end -->
 
-**Plugin integration author / 插件集成作者:** qi Cai
+**Plugin integration author:** qi Cai
 
-**Contact / 联系邮箱:** <qicaiCN@gmail.com>
+**Contact:** <qicaiCN@gmail.com>
 
 This plugin outputs original-image pixel coordinates and a shared feature ID
 space for each image. Pair-conditioned LoFTR coordinates must be associated
@@ -160,46 +164,8 @@ do not require changing the default SIFT workflow.
 Semi-dense matching describes the resized network input. More pair matches do
 not guarantee more consistent multiview tracks or triangulated 3D points.
 
-# PoMVG LoFTR 匹配
 
-0.3.1 默认通过 `remoteMAC` SSH 别名执行。连接使用本机 OpenSSH 配置、密钥或
-代理，严格检查服务器主机密钥；公开包不包含维护者的私有服务器地址或私钥。
-`ssh_python_executable` 填写远端锁定版本的 LoFTR 环境中的 Python，
-`ssh_work_dir` 是服务器工作目录，`ssh_checkpoint_path` 可选指定服务器权重。
-默认会从远端 Python 环境的 `runtime/weights` 选择并核对室内或室外模型。
-本机控制程序不导入模型，运行记录显示上传、匹配和下载进度，失败不会转到本地推理。
-下载结果通过完整性和 SHA-256 校验后，仍输出标准特征和匹配数据。
-超时或取消会停止本次任务，默认清理本次上传图像和结果；显式缓存保留。
-SSH 模式下，匹配缓存和基础缓存参数均填写服务器路径。
-需要本地推理时，将 `execution_backend` 改为 `local`。
-
-在 `[method_loftr]` 中设置参数。默认长边为 1024，置信度为 0.2；
-`max_keypoints=0` 取消每对图像的匹配数量上限，
-`max_keypoints_per_image=0` 取消每张图像的共享特征数量上限。
-
-插件为每张图像建立共享特征编号，输出原图像素坐标。
-`keypoint_merge_radius` 使用原图像素单位；`geometry_threshold` 使用缩放后的网络像素单位。
-将双视图估计的已验证匹配输出连接到初始轨迹构建模块，并设置
-`match_selection_mode=inliers_only`、`track_building_mode=legacy`。
-初始位姿模块同样使用已验证匹配；原始匹配另接到固定姿态后的 Fresh 重建，
-不要将原始匹配储备直接激活为初始 LiGT 求解轨迹。
-`pair_geometry=magsac` 仅为可选诊断项，默认关闭。
-`magsac_post` 在特征关联后筛选，保留原始特征编号空间；跨分支复用编号时，
-输入图像与所有关联参数必须相同。两条分支可使用相同的逐场景缓存目录，避免重复网络推理。
-
-设置 `checkpoint_path` 和 `pair_cache_dir` 可保存未截断的网络匹配。
-复用前会核对图像、模型和预处理信息；复用时仍重新进行几何筛选与特征关联。
-
-`refine_endpoint=second` 沿用 Kornia 的端点顺序；`first` 使用 HLOC 查询端顺序，
-两种模式分别校验缓存。`rotation_rescue=true` 对弱支持视图关联的不可靠图像对
-进行 90/180/270 度重试，只有几何支持显著改善时才采用新匹配；否则保留原结果。
-旋转时保持粗网格对齐，并将坐标还原到原图。该选项默认关闭，须指定固定权重。
-可用 `base_pair_cache_dir` 复用原方向缓存，重试结果须使用另一个 `pair_cache_dir`。
-各次重试记录在 `rotation_provenance.json`，后续仍需进行标定双视图和多视图验证。
-
-半稠密是相对于网络输入图像而言，最终三维点数还取决于多视图关联、几何一致性和三角化。
-
-## Third-party dependencies / 第三方依赖
+## Third-party dependencies
 
 **qi Cai is the PoMVG integration author.** The original LoFTR authors are
 Jiaming Sun, Zehong Shen, Yu'ang Wang, Hujun Bao and Xiaowei Zhou. This plugin
@@ -215,10 +181,10 @@ runs Kornia 0.7.4's LoFTR implementation and the original dual-softmax models.
 | micromamba | 2.3.2, installation fallback | Environment creation | BSD-3-Clause and bundled notices |
 | OpenSSH | System-provided | Optional SSH transport | System distribution; no client binary or key is bundled |
 
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for original authors,
+See [THIRD_PARTY_NOTICES.md](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_loftr/THIRD_PARTY_NOTICES.md) for original authors,
 source links, checkpoint URLs/hashes and full license locations. The complete
 locked package inventory and installation recipe are in
-[deps/README.md](deps/README.md). LoFTR and Kornia are separate upstream
+[deps/README.md](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_loftr/deps/README.md). LoFTR and Kornia are separate upstream
 projects; their authorship is preserved alongside the PoMVG integration credit.
 
 References:

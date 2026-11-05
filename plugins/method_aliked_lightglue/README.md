@@ -1,44 +1,48 @@
 # ALIKED + LightGlue for PoMVG
 
+English | [简体中文](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_aliked_lightglue/README_zh.md)
+
+Published version: **0.1.2** · [Signed release](https://github.com/pose-only-vision/PoSDK-plugins/releases/tag/posdk-method_aliked_lightglue-v0.1.2)
+
 <!-- posdk:published-source:start -->
-## 插件源码 / Plugin source
+## Plugin source
 
-当前已发布版本 **0.1.2** 的插件源码在 [`src/`](src/)；外部依赖锁定与安装说明在 [`deps/`](deps/)。
+The plugin source for published version **0.1.2** is in [`src/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_aliked_lightglue/src/). Dependency locks and installation instructions are in [`deps/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_aliked_lightglue/deps/).
 
-- [阅读 C++、Python 和配置源码](src/)
-- [构建说明](src/README.md)
-- [源码文件与 SHA-256 清单](src/source-manifest.json)
+- [Browse C++, Python and configuration source](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_aliked_lightglue/src/)
+- [Build instructions](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_aliked_lightglue/src/README.md)
+- [Source file and SHA-256 inventory](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_aliked_lightglue/src/source-manifest.json)
 
 <!-- posdk:published-source:end -->
 
 
 <!-- posdk:upstream-research:v1:start -->
-## Original research and authors / 原论文与原作团队
+## Original research and authors
 
-**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+**PoSDK integration:** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
 
 ### ALIKED: A Lighter Keypoint and Descriptor Extraction Network via Deformable Transformation
 
-- **Authors / 原作者：** Xiaoming Zhao, Xingming Wu, Weihai Chen, Peter C. Y. Chen, Qingsong Xu, Zhengguo Li.
-- **Team / 团队：** ALIKED original author team.
-- **Publication / 论文：** 2023 · IEEE Transactions on Instrumentation and Measurement.
-- **Paper / 原文：** [ALIKED: A Lighter Keypoint and Descriptor Extraction Network via Deformable Transformation](https://arxiv.org/abs/2304.03608).
-- **Official project or implementation / 原作项目或实现：** [https://github.com/Shiaoming/ALIKED](https://github.com/Shiaoming/ALIKED).
+- **Authors:** Xiaoming Zhao, Xingming Wu, Weihai Chen, Peter C. Y. Chen, Qingsong Xu, Zhengguo Li.
+- **Team:** ALIKED original author team.
+- **Publication:** 2023 · IEEE Transactions on Instrumentation and Measurement.
+- **Paper:** [ALIKED: A Lighter Keypoint and Descriptor Extraction Network via Deformable Transformation](https://arxiv.org/abs/2304.03608).
+- **Official project or implementation:** [https://github.com/Shiaoming/ALIKED](https://github.com/Shiaoming/ALIKED).
 
 ### LightGlue: Local Feature Matching at Light Speed
 
-- **Authors / 原作者：** Philipp Lindenberger, Paul-Edouard Sarlin, Marc Pollefeys.
-- **Team / 团队：** ETH Zurich Computer Vision and Geometry Group.
-- **Publication / 论文：** 2023 · ICCV.
-- **Paper / 原文：** [LightGlue: Local Feature Matching at Light Speed](https://openaccess.thecvf.com/content/ICCV2023/html/Lindenberger_LightGlue_Local_Feature_Matching_at_Light_Speed_ICCV_2023_paper.html).
-- **Official project or implementation / 原作项目或实现：** [https://github.com/cvg/LightGlue](https://github.com/cvg/LightGlue).
+- **Authors:** Philipp Lindenberger, Paul-Edouard Sarlin, Marc Pollefeys.
+- **Team:** ETH Zurich Computer Vision and Geometry Group.
+- **Publication:** 2023 · ICCV.
+- **Paper:** [LightGlue: Local Feature Matching at Light Speed](https://openaccess.thecvf.com/content/ICCV2023/html/Lindenberger_LightGlue_Local_Feature_Matching_at_Light_Speed_ICCV_2023_paper.html).
+- **Official project or implementation:** [https://github.com/cvg/LightGlue](https://github.com/cvg/LightGlue).
 
 Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
 <!-- posdk:upstream-research:v1:end -->
 
-**Plugin integration author / 插件集成作者:** qi Cai
+**Plugin integration author:** qi Cai
 
-**Contact / 联系邮箱:** <qicaiCN@gmail.com>
+**Contact:** <qicaiCN@gmail.com>
 
 Experimental PoMVG frontend for dataset-level
 [ALIKED](https://github.com/Shiaoming/ALIKED) feature extraction and
@@ -182,7 +186,7 @@ distinguishable.
 - The plugin fails closed when its private runtime or identity is invalid; it
   has no algorithm fallback.
 
-## Third-party dependencies / 第三方依赖
+## Third-party dependencies
 
 qi Cai authors and maintains the PoMVG integration. ALIKED, LightGlue, their
 model weights, and the Python libraries retain their upstream authors and
@@ -199,10 +203,12 @@ licenses.
 | [Kornia](https://github.com/kornia/kornia/tree/v0.6.12) | 0.6.12 | Geometry utilities used by the pinned frontend | Apache-2.0 |
 | [micromamba](https://github.com/mamba-org/mamba) | 2.3.2, when a local environment creator is unavailable | Installation bootstrap | BSD-3-Clause |
 
-安装时创建插件独立环境并校验源码、模型和软件包的 SHA-256；不修改用户的
-Python/Conda 环境。该插件使用 Pillow 解码图像，运行环境不安装 OpenCV。
-ALIKED 和 LightGlue 的原始作者署名与许可证不因 PoMVG 集成而改变。
+Installation creates a plugin-private environment and verifies the SHA-256
+of sources, models and packages without modifying the user's Python/Conda
+environment. Images are decoded with Pillow; OpenCV is not installed in
+the runtime. The original ALIKED and LightGlue authorship and licenses
+remain unchanged by the PoMVG integration.
 
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for upstream authors,
-checkpoint URLs and license locations, and [deps/README.md](deps/README.md)
+See [THIRD_PARTY_NOTICES.md](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_aliked_lightglue/THIRD_PARTY_NOTICES.md) for upstream authors,
+checkpoint URLs and license locations, and [deps/README.md](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_aliked_lightglue/deps/README.md)
 for the complete version/hash inventory and installation recipe.

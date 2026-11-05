@@ -1,25 +1,29 @@
 # SuperPoint + LightGlue for PoSDK
 
-<!-- posdk:upstream-research:v1:start -->
-## Original research and authors / 原论文与原作团队
+English | [简体中文](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_superpoint_lightglue/README_zh.md)
 
-**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+Published version: **0.1.1** · [Signed release](https://github.com/pose-only-vision/PoSDK-plugins/releases/tag/posdk-method_superpoint_lightglue-v0.1.1)
+
+<!-- posdk:upstream-research:v1:start -->
+## Original research and authors
+
+**PoSDK integration:** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
 
 ### SuperPoint: Self-Supervised Interest Point Detection and Description
 
-- **Authors / 原作者：** Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich.
-- **Team / 团队：** Magic Leap.
-- **Publication / 论文：** 2018 · CVPR Workshops.
-- **Paper / 原文：** [SuperPoint: Self-Supervised Interest Point Detection and Description](https://openaccess.thecvf.com/content_cvpr_2018_workshops/w9/html/DeTone_SuperPoint_Self-Supervised_Interest_CVPR_2018_paper.html).
-- **Official project or implementation / 原作项目或实现：** [https://github.com/magicleap/SuperPointPretrainedNetwork](https://github.com/magicleap/SuperPointPretrainedNetwork).
+- **Authors:** Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich.
+- **Team:** Magic Leap.
+- **Publication:** 2018 · CVPR Workshops.
+- **Paper:** [SuperPoint: Self-Supervised Interest Point Detection and Description](https://openaccess.thecvf.com/content_cvpr_2018_workshops/w9/html/DeTone_SuperPoint_Self-Supervised_Interest_CVPR_2018_paper.html).
+- **Official project or implementation:** [https://github.com/magicleap/SuperPointPretrainedNetwork](https://github.com/magicleap/SuperPointPretrainedNetwork).
 
 ### LightGlue: Local Feature Matching at Light Speed
 
-- **Authors / 原作者：** Philipp Lindenberger, Paul-Edouard Sarlin, Marc Pollefeys.
-- **Team / 团队：** ETH Zurich Computer Vision and Geometry Group.
-- **Publication / 论文：** 2023 · ICCV.
-- **Paper / 原文：** [LightGlue: Local Feature Matching at Light Speed](https://openaccess.thecvf.com/content/ICCV2023/html/Lindenberger_LightGlue_Local_Feature_Matching_at_Light_Speed_ICCV_2023_paper.html).
-- **Official project or implementation / 原作项目或实现：** [https://github.com/cvg/LightGlue](https://github.com/cvg/LightGlue).
+- **Authors:** Philipp Lindenberger, Paul-Edouard Sarlin, Marc Pollefeys.
+- **Team:** ETH Zurich Computer Vision and Geometry Group.
+- **Publication:** 2023 · ICCV.
+- **Paper:** [LightGlue: Local Feature Matching at Light Speed](https://openaccess.thecvf.com/content/ICCV2023/html/Lindenberger_LightGlue_Local_Feature_Matching_at_Light_Speed_ICCV_2023_paper.html).
+- **Official project or implementation:** [https://github.com/cvg/LightGlue](https://github.com/cvg/LightGlue).
 
 Attribution checked against the original projects on **2026-11-01**. Citation does not imply endorsement of the PoSDK wrapper.
 <!-- posdk:upstream-research:v1:end -->
@@ -63,8 +67,9 @@ The PoSDK wrapper license does not override the upstream license.
 
 Plugin-owned C++, Python, CMake and configuration source is published in `src/`.
 Pinned dependency locks, public source references, licenses and installer recipes
-are published in sibling `deps/`. The signed package binds this exact public file
-snapshot; no other plugin or PoSDK project history is included.
+are published in sibling `deps/`. The signed package binds the release-time
+public file snapshot. Documentation on the default branch may be updated
+independently.
 
 For a standalone source build, copy the contents of `src/` to a separate build
 workspace and restore sibling `deps/` there before configuring with the matching

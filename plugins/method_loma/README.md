@@ -1,29 +1,33 @@
 # LoMa-B for PoSDK
 
+English | [简体中文](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_loma/README_zh.md)
+
+Published version: **0.1.0** · [Signed release](https://github.com/pose-only-vision/PoSDK-plugins/releases/tag/posdk-method_loma-v0.1.0)
+
 <!-- posdk:published-source:start -->
-## 插件源码 / Plugin source
+## Plugin source
 
-当前已发布版本 **0.1.0** 的插件源码在 [`src/`](src/)；外部依赖锁定与安装说明在 [`deps/`](deps/)。
+The plugin source for published version **0.1.0** is in [`src/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_loma/src/). Dependency locks and installation instructions are in [`deps/`](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_loma/deps/).
 
-- [阅读 C++、Python 和配置源码](src/)
-- [构建说明](src/README.md)
-- [源码文件与 SHA-256 清单](src/source-manifest.json)
+- [Browse C++, Python and configuration source](https://github.com/pose-only-vision/PoSDK-plugins/tree/main/plugins/method_loma/src/)
+- [Build instructions](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_loma/src/README.md)
+- [Source file and SHA-256 inventory](https://github.com/pose-only-vision/PoSDK-plugins/blob/main/plugins/method_loma/src/source-manifest.json)
 
 <!-- posdk:published-source:end -->
 
 
 <!-- posdk:upstream-research:v1:start -->
-## Original research and authors / 原论文与原作团队
+## Original research and authors
 
-**PoSDK integration / 插件封装：** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
+**PoSDK integration:** qi Cai. Original algorithm authorship and upstream licenses remain with the authors below.
 
 ### LoMa: Local Feature Matching Revisited
 
-- **Authors / 原作者：** David Nordström, Johan Edstedt, Georg Bökman, Jonathan Astermark, Anders Heyden, Viktor Larsson, Mårten Wadenbäck, Michael Felsberg, Fredrik Kahl.
-- **Team / 团队：** Chalmers University of Technology; Linköping University; University of Amsterdam; Lund University.
-- **Publication / 论文：** 2026 · ECCV 2026.
-- **Paper / 原文：** [LoMa: Local Feature Matching Revisited](https://arxiv.org/abs/2604.04931).
-- **Official project or implementation / 原作项目或实现：** [https://github.com/davnords/LoMa](https://github.com/davnords/LoMa).
+- **Authors:** David Nordström, Johan Edstedt, Georg Bökman, Jonathan Astermark, Anders Heyden, Viktor Larsson, Mårten Wadenbäck, Michael Felsberg, Fredrik Kahl.
+- **Team:** Chalmers University of Technology; Linköping University; University of Amsterdam; Lund University.
+- **Publication:** 2026 · ECCV 2026.
+- **Paper:** [LoMa: Local Feature Matching Revisited](https://arxiv.org/abs/2604.04931).
+- **Official project or implementation:** [https://github.com/davnords/LoMa](https://github.com/davnords/LoMa).
 
 This plugin currently exposes **LoMa-B / DaD + DeDoDe-G**, using ONNX assets published by the original authors and a COLMAP-compatible adapter. It does not advertise LoMa-L, LoMa-G or MVLoMa support.
 
